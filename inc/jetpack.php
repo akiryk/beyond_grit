@@ -4,7 +4,7 @@
  *
  * @link https://jetpack.me/
  *
- * @package ak_salty
+ * @package beyondgrit
  */
 
 /**

@@ -9,7 +9,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package ak_salty
+ * @package beyondgrit
  */
 
 get_header(); ?>

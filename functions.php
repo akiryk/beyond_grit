@@ -1,10 +1,10 @@
 <?php
 /**
- * ak_salty functions and definitions.
+ * beyondgrit functions and definitions.
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package ak_salty
+ * @package beyondgrit
  */
 
 if ( ! function_exists( 'salt_setup' ) ) :
@@ -19,7 +19,7 @@ function salt_setup() {
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
-	 * If you're building a theme based on ak_salty, use a find and replace
+	 * If you're building a theme based on beyondgrit, use a find and replace
 	 * to change 'salt' to the name of your theme in all the template files.
 	 */
 	load_theme_textdomain( 'salt', get_template_directory() . '/languages' );

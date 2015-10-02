@@ -1,8 +1,8 @@
 <?php
 /**
- * ak_salty Theme Customizer.
+ * beyondgrit Theme Customizer.
  *
- * @package ak_salty
+ * @package beyondgrit
  */
 
 /**

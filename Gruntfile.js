@@ -8,28 +8,42 @@ module.exports = function(grunt) {
     sass: {                             // Task
       dev: {                            // Target
         options: {                       // Target options
-          style: 'expanded'
+          style: 'expanded',
+          sourcemap: 'auto'
         },
         files: {                         // Dictionary of files
-          'compiled/style.css': 'sass/style.scss',
+          'style-human.css': 'sass/style.scss',
            // 'destination': 'source'
         }
       },
       dist: {
         options: {
-          style: 'compressed'
+          style: 'compressed',
+          sourcemap: 'auto'
         },
         files: {                         // Dictionary of files
-          'compiled/style-min.css': 'sass/style.scss',
+          'style.css': 'sass/style.scss',
            // 'destination': 'source'
         }
+      }
+    },
+
+    postcss: {
+      options: {
+        map: true, // inline sourcemaps
+        processors: [
+          require('autoprefixer')({browsers: 'last 2 versions'}), // add vendor prefixes
+        ]
+      },
+      dist: {
+        src: '*.css'
       }
     },
 
     watch: {
       css: {
         files: ['**/*.scss'],
-        tasks: ['sass']
+        tasks: ['sass','postcss']
       }
     }
 
@@ -38,11 +52,9 @@ module.exports = function(grunt) {
   // Load Grunt plugins
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-postcss');
 
   // Default task(s).
-  grunt.registerTask('default', [
-    'sass',
-    'watch'
-    ]);
+  grunt.registerTask('default', ['watch']);
 
 };
