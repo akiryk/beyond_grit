@@ -1,8 +1,8 @@
 <?php
 /**
- * beyondgrit Theme Customizer.
+ * beyond_grit Theme Customizer.
  *
- * @package beyondgrit
+ * @package beyond_grit
  */
 
 /**
@@ -10,17 +10,17 @@
  *
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
-function salt_customize_register( $wp_customize ) {
+function beyond_grit_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
 }
-add_action( 'customize_register', 'salt_customize_register' );
+add_action( 'customize_register', 'beyond_grit_customize_register' );
 
 /**
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
-function salt_customize_preview_js() {
-	wp_enqueue_script( 'salt_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20130508', true );
+function beyond_grit_customize_preview_js() {
+	wp_enqueue_script( 'beyond_grit_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20130508', true );
 }
-add_action( 'customize_preview_init', 'salt_customize_preview_js' );
+add_action( 'customize_preview_init', 'beyond_grit_customize_preview_js' );

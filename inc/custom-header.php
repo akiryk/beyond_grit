@@ -12,37 +12,37 @@
  *
  * @link http://codex.wordpress.org/Custom_Headers
  *
- * @package beyondgrit
+ * @package beyond_grit
  */
 
 /**
  * Set up the WordPress core custom header feature.
  *
- * @uses salt_header_style()
- * @uses salt_admin_header_style()
- * @uses salt_admin_header_image()
+ * @uses beyond_grit_header_style()
+ * @uses beyond_grit_admin_header_style()
+ * @uses beyond_grit_admin_header_image()
  */
-function salt_custom_header_setup() {
-	add_theme_support( 'custom-header', apply_filters( 'salt_custom_header_args', array(
+function beyond_grit_custom_header_setup() {
+	add_theme_support( 'custom-header', apply_filters( 'beyond_grit_custom_header_args', array(
 		'default-image'          => '',
 		'default-text-color'     => '000000',
 		'width'                  => 1000,
 		'height'                 => 250,
 		'flex-height'            => true,
-		'wp-head-callback'       => 'salt_header_style',
-		'admin-head-callback'    => 'salt_admin_header_style',
-		'admin-preview-callback' => 'salt_admin_header_image',
+		'wp-head-callback'       => 'beyond_grit_header_style',
+		'admin-head-callback'    => 'beyond_grit_admin_header_style',
+		'admin-preview-callback' => 'beyond_grit_admin_header_image',
 	) ) );
 }
-add_action( 'after_setup_theme', 'salt_custom_header_setup' );
+add_action( 'after_setup_theme', 'beyond_grit_custom_header_setup' );
 
-if ( ! function_exists( 'salt_header_style' ) ) :
+if ( ! function_exists( 'beyond_grit_header_style' ) ) :
 /**
  * Styles the header image and text displayed on the blog
  *
- * @see salt_custom_header_setup().
+ * @see beyond_grit_custom_header_setup().
  */
-function salt_header_style() {
+function beyond_grit_header_style() {
 	$header_text_color = get_header_textcolor();
 
 	// If no custom options for text are set, let's bail
@@ -75,15 +75,15 @@ function salt_header_style() {
 	</style>
 	<?php
 }
-endif; // salt_header_style
+endif; // beyond_grit_header_style
 
-if ( ! function_exists( 'salt_admin_header_style' ) ) :
+if ( ! function_exists( 'beyond_grit_admin_header_style' ) ) :
 /**
  * Styles the header image displayed on the Appearance > Header admin panel.
  *
- * @see salt_custom_header_setup().
+ * @see beyond_grit_custom_header_setup().
  */
-function salt_admin_header_style() {
+function beyond_grit_admin_header_style() {
 ?>
 	<style type="text/css">
 		.appearance_page_custom-header #headimg {
@@ -103,15 +103,15 @@ function salt_admin_header_style() {
 	</style>
 <?php
 }
-endif; // salt_admin_header_style
+endif; // beyond_grit_admin_header_style
 
-if ( ! function_exists( 'salt_admin_header_image' ) ) :
+if ( ! function_exists( 'beyond_grit_admin_header_image' ) ) :
 /**
  * Custom header image markup displayed on the Appearance > Header admin panel.
  *
- * @see salt_custom_header_setup().
+ * @see beyond_grit_custom_header_setup().
  */
-function salt_admin_header_image() {
+function beyond_grit_admin_header_image() {
 ?>
 	<div id="headimg">
 		<h1 class="displaying-header-text">
@@ -124,4 +124,4 @@ function salt_admin_header_image() {
 	</div>
 <?php
 }
-endif; // salt_admin_header_image
+endif; // beyond_grit_admin_header_image

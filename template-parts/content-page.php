@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package beyondgrit
+ * @package beyond_grit
  */
 
 ?>
@@ -18,7 +18,7 @@
 		<?php the_content(); ?>
 		<?php
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'salt' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'beyond_grit' ),
 				'after'  => '</div>',
 			) );
 		?>
@@ -29,7 +29,7 @@
 			edit_post_link(
 				sprintf(
 					/* translators: %s: Name of current post */
-					esc_html__( 'Edit %s', 'salt' ),
+					esc_html__( 'Edit %s', 'beyond_grit' ),
 					the_title( '<span class="screen-reader-text">"', '"</span>', false )
 				),
 				'<span class="edit-link">',

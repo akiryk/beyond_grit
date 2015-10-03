@@ -1,13 +1,13 @@
 <?php
 /**
- * beyondgrit functions and definitions.
+ * beyond_grit functions and definitions.
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package beyondgrit
+ * @package beyond_grit
  */
 
-if ( ! function_exists( 'salt_setup' ) ) :
+if ( ! function_exists( 'beyond_grit_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -15,14 +15,14 @@ if ( ! function_exists( 'salt_setup' ) ) :
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
-function salt_setup() {
+function beyond_grit_setup() {
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
-	 * If you're building a theme based on beyondgrit, use a find and replace
-	 * to change 'salt' to the name of your theme in all the template files.
+	 * If you're building a theme based on beyond_grit, use a find and replace
+	 * to change 'beyond_grit' to the name of your theme in all the template files.
 	 */
-	load_theme_textdomain( 'salt', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'beyond_grit', get_template_directory() . '/languages' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -44,7 +44,7 @@ function salt_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'primary' => esc_html__( 'Primary Menu', 'salt' ),
+		'primary' => esc_html__( 'Primary Menu', 'beyond_grit' ),
 	) );
 
 	/*
@@ -72,13 +72,13 @@ function salt_setup() {
 	) );
 
 	// Set up the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'salt_custom_background_args', array(
+	add_theme_support( 'custom-background', apply_filters( 'beyond_grit_custom_background_args', array(
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
 }
-endif; // salt_setup
-add_action( 'after_setup_theme', 'salt_setup' );
+endif; // beyond_grit_setup
+add_action( 'after_setup_theme', 'beyond_grit_setup' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -87,19 +87,19 @@ add_action( 'after_setup_theme', 'salt_setup' );
  *
  * @global int $content_width
  */
-function salt_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'salt_content_width', 640 );
+function beyond_grit_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'beyond_grit_content_width', 640 );
 }
-add_action( 'after_setup_theme', 'salt_content_width', 0 );
+add_action( 'after_setup_theme', 'beyond_grit_content_width', 0 );
 
 /**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function salt_widgets_init() {
+function beyond_grit_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'salt' ),
+		'name'          => esc_html__( 'Sidebar', 'beyond_grit' ),
 		'id'            => 'sidebar-1',
 		'description'   => '',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
@@ -108,23 +108,23 @@ function salt_widgets_init() {
 		'after_title'   => '</h2>',
 	) );
 }
-add_action( 'widgets_init', 'salt_widgets_init' );
+add_action( 'widgets_init', 'beyond_grit_widgets_init' );
 
 /**
  * Enqueue scripts and styles.
  */
-function salt_scripts() {
-	wp_enqueue_style( 'salt-style', get_stylesheet_uri() );
+function beyond_grit_scripts() {
+	wp_enqueue_style( 'beyond_grit-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'salt-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
+	wp_enqueue_script( 'beyond_grit-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
-	wp_enqueue_script( 'salt-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
+	wp_enqueue_script( 'beyond_grit-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'salt_scripts' );
+add_action( 'wp_enqueue_scripts', 'beyond_grit_scripts' );
 
 /**
  * Implement the Custom Header feature.

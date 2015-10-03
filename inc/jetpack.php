@@ -4,28 +4,28 @@
  *
  * @link https://jetpack.me/
  *
- * @package beyondgrit
+ * @package beyond_grit
  */
 
 /**
  * Add theme support for Infinite Scroll.
  * See: https://jetpack.me/support/infinite-scroll/
  */
-function salt_jetpack_setup() {
+function beyond_grit_jetpack_setup() {
 	add_theme_support( 'infinite-scroll', array(
 		'container' => 'main',
-		'render'    => 'salt_infinite_scroll_render',
+		'render'    => 'beyond_grit_infinite_scroll_render',
 		'footer'    => 'page',
 	) );
-} // end function salt_jetpack_setup
-add_action( 'after_setup_theme', 'salt_jetpack_setup' );
+} // end function beyond_grit_jetpack_setup
+add_action( 'after_setup_theme', 'beyond_grit_jetpack_setup' );
 
 /**
  * Custom render function for Infinite Scroll.
  */
-function salt_infinite_scroll_render() {
+function beyond_grit_infinite_scroll_render() {
 	while ( have_posts() ) {
 		the_post();
 		get_template_part( 'template-parts/content', get_post_format() );
 	}
-} // end function salt_infinite_scroll_render
+} // end function beyond_grit_infinite_scroll_render

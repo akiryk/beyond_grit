@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
- * @package beyondgrit
+ * @package beyond_grit
  */
 
 get_header(); ?>
