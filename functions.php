@@ -63,19 +63,19 @@ function beyond_grit_setup() {
 	 * Enable support for Post Formats.
 	 * See https://developer.wordpress.org/themes/functionality/post-formats/
 	 */
-	add_theme_support( 'post-formats', array(
-		'aside',
-		'image',
-		'video',
-		'quote',
-		'link',
-	) );
+	// add_theme_support( 'post-formats', array(
+	// 	'aside',
+	// 	'image',
+	// 	'video',
+	// 	'quote',
+	// 	'link',
+	// ) );
 
 	// Set up the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'beyond_grit_custom_background_args', array(
-		'default-color' => 'ffffff',
-		'default-image' => '',
-	) ) );
+	// add_theme_support( 'custom-background', apply_filters( 'beyond_grit_custom_background_args', array(
+	// 	'default-color' => 'ffffff',
+	// 	'default-image' => '',
+	// ) ) );
 }
 endif; // beyond_grit_setup
 add_action( 'after_setup_theme', 'beyond_grit_setup' );
@@ -97,24 +97,26 @@ add_action( 'after_setup_theme', 'beyond_grit_content_width', 0 );
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function beyond_grit_widgets_init() {
-	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'beyond_grit' ),
-		'id'            => 'sidebar-1',
-		'description'   => '',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
-}
-add_action( 'widgets_init', 'beyond_grit_widgets_init' );
+// function beyond_grit_widgets_init() {
+// 	register_sidebar( array(
+// 		'name'          => esc_html__( 'Sidebar', 'beyond_grit' ),
+// 		'id'            => 'sidebar-1',
+// 		'description'   => '',
+// 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+// 		'after_widget'  => '</aside>',
+// 		'before_title'  => '<h2 class="widget-title">',
+// 		'after_title'   => '</h2>',
+// 	) );
+// }
+// add_action( 'widgets_init', 'beyond_grit_widgets_init' );
 
 /**
  * Enqueue scripts and styles.
  */
 function beyond_grit_scripts() {
 	wp_enqueue_style( 'beyond_grit-style', get_stylesheet_uri() );
+
+	wp_enqueue_style( 'beyond_grit-google-fonts', 'https://fonts.googleapis.com/css?family=Slabo+27px' );
 
 	wp_enqueue_script( 'beyond_grit-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
@@ -129,7 +131,7 @@ add_action( 'wp_enqueue_scripts', 'beyond_grit_scripts' );
 /**
  * Implement the Custom Header feature.
  */
-require get_template_directory() . '/inc/custom-header.php';
+// require get_template_directory() . '/inc/custom-header.php';
 
 /**
  * Custom template tags for this theme.
