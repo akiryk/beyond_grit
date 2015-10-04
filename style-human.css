@@ -7,7 +7,7 @@ Description: A test sassy underscores theme
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: salt
+Text Domain: beyond_grit
 Tags:
 
 This theme, like WordPress, is licensed under the GPL.
@@ -270,14 +270,38 @@ input,
 select,
 textarea {
   color: #404040;
-  font-family: sans-serif;
+  font-family: serif;
   font-size: 16px;
   font-size: 1rem;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
-h1, h2, h3, h4, h5, h6 {
+body.fonts-loaded,
+.fonts-loaded button,
+.fonts-loaded input,
+.fonts-loaded select,
+.fonts-loaded textarea {
+  font-family: "Merriweather", serif;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   clear: both;
+  font-family: sans-serif;
+}
+
+.fonts-loaded h1,
+.fonts-loaded h2,
+.fonts-loaded h3,
+.fonts-loaded h4,
+.fonts-loaded h5,
+.fonts-loaded h6 {
+  font-family: "Merriweather Sans" sans-serif;
 }
 
 p {

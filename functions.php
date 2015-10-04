@@ -116,7 +116,7 @@ add_action( 'after_setup_theme', 'beyond_grit_content_width', 0 );
 function beyond_grit_scripts() {
 	wp_enqueue_style( 'beyond_grit-style', get_stylesheet_uri() );
 
-	wp_enqueue_style( 'beyond_grit-google-fonts', 'https://fonts.googleapis.com/css?family=Slabo+27px' );
+	wp_enqueue_style( 'beyond_grit-merriweather-fonts', 'https://fonts.googleapis.com/css?family=Merriweather:400,400italic|Merriweather+Sans:800');
 
 	wp_enqueue_script( 'beyond_grit-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
@@ -127,6 +127,26 @@ function beyond_grit_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'beyond_grit_scripts' );
+
+
+/**
+ * Add fonts-loaded class if cookie is set
+ */
+function beyond_grit_class_names( $classes ) {
+	$classes[] = 'fonts-loaded';
+	return $classes;
+}
+
+/**
+ * Handle cookies
+ */
+function beyond_grit_getcookie() {
+  if ( isset( $_COOKIE['fonts-loaded'] ) && $_COOKIE['fonts-loaded'] == 'true' ) {
+  	add_filter( 'body_class', 'beyond_grit_class_names' );
+  }
+}
+add_action( 'wp_head', 'beyond_grit_getcookie' );
+
 
 /**
  * Implement the Custom Header feature.

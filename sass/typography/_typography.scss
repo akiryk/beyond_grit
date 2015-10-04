@@ -9,6 +9,15 @@ textarea {
 	line-height: $font__line-height-body;
 }
 
+body.fonts-loaded ,
+.fonts-loaded button,
+.fonts-loaded input,
+.fonts-loaded select,
+.fonts-loaded textarea {
+  font-family: $font__main--webfont;
+  line-height: $font__line-height-body;
+}
+
 @import "headings";
 
 @import "copy";
