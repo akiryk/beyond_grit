@@ -3,6 +3,11 @@
 _s
 ===
 
+Fonts
+-----
+
+If you want to change fonts, do it in the enqueue scripts function in functions.php, but then update footer.php with the fonts to load using [fontfaceobserver script](https://github.com/bramstein/fontfaceobserver). Then update the fonts in variables-site > typography. For more on how I'm using cookies to check for font caching, see [Filament Group article](https://www.filamentgroup.com/lab/font-events.html).
+
 Getting Started
 ---------------
 
