@@ -1,0 +1,52 @@
+/*
+ * Base
+ *
+ * Override normalize.scss with styles specific to this theme.
+ * Normalize.scss brings everything to a predictable baseline — this file
+ * brings everything to a baseline that aligns with this theme's styles.
+ *
+ */
+
+body,
+button,
+input,
+select,
+textarea {
+  color: $color__text-main;
+  font-family: $font__main;
+  @include font-size(1);
+  line-height: $font__line-height-body;
+}
+
+body.fonts-loaded ,
+.fonts-loaded button,
+.fonts-loaded input,
+.fonts-loaded select,
+.fonts-loaded textarea {
+  font-family: $font__main--webfont;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  clear: both;
+  font-family: $font__headings;
+}
+
+.fonts-loaded h1,
+.fonts-loaded h2,
+.fonts-loaded h3,
+.fonts-loaded h4,
+.fonts-loaded h5,
+.fonts-loaded h6 {
+  font-family: $font__headings--webfont;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}

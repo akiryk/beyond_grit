@@ -1,0 +1,26 @@
+.site-branding {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.site-title {
+  font-size: 48px;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.fonts-loaded .site-title {
+  font-family: $font__headings--webfont;
+}
+
+.site-title .first-word {
+  color: #e2600f;
+}
+
+.site-title .degree-glyph {
+  color: #e2600f;
+  font-family: 'Open Sans';
+  font-weight: 300;
+
+}

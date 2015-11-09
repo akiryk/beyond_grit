@@ -1,0 +1,21 @@
+/*
+ * Layout
+ *
+ * Manage page-level layout styles, e.g. max-width of page.
+ *
+ */
+
+
+.section {
+  padding: 1em calc(50% - #{$desktop-content-width/2} );
+}
+
+.section--hero {
+  background: url(images/hero-bg-large.jpg) no-repeat $color__background-hero;
+  background-position-x: center;
+  min-height: 565px;
+}
+
+.section--masthead {
+  padding: 0.5em 2em;
+}

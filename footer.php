@@ -46,15 +46,13 @@ u();setTimeout(a,50)}}var D=Date.now();w(l,"sans-serif",k);w(m,"serif",k);w(n,"m
     if( w.document.documentElement.className.indexOf( "fonts-loaded" ) > -1 ){
       return;
     }
-    var fontA = new w.FontFaceObserver( "Merriweather", {
-      weight: 400
-    });
-    var fontB = new w.FontFaceObserver( "Merriweather", {
+    var fontA = new w.FontFaceObserver( "hwt-artz" );
+    var fontB = new w.FontFaceObserver( "Poppins", {
       weight: 400,
       style: "italic"
     });
-    var fontC = new w.FontFaceObserver( "Merriweather Sans", {
-      weight: 800
+    var fontC = new w.FontFaceObserver( "Poppins", {
+      weight: 700
     });
     w.Promise
       .all([fontA.check(), fontB.check(), fontC.check()])
