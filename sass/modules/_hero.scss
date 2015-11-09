@@ -6,9 +6,6 @@
  */
 
 .section--hero {
-  display: flex;
-
-  h1 {
-    margin: auto;
-  }
+	background: $color__background-hero;
+  	min-height: 500px;
 }

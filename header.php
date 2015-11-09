@@ -27,9 +27,9 @@
   <header id="masthead" class="site-header section--masthead" role="banner">
     <div class="site-branding">
       <?php if ( is_front_page() && is_home() ) : ?>
-        <h1 class="site-title"><span class="first-word">360</span><span class="degree-glyph">°</span> Youth Development</h1>
+        <h1 class="site-title"><?php bloginfo( 'title' ); ?></h1>
       <?php else : ?>
-        <p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><span class="first-word">360°</span> Youth Development</a></p>
+        <p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'title' ); ?></a></p>
       <?php endif; ?>
       <p class="site-description"><?php bloginfo( 'description' ); ?></p>
     </div><!-- .site-branding -->

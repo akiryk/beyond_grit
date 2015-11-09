@@ -307,12 +307,6 @@ a {
   padding: 1em calc(50% - 30em );
 }
 
-.section--hero {
-  background: url(images/hero-bg-large.jpg) no-repeat #6da4b6;
-  background-position-x: center;
-  min-height: 565px;
-}
-
 .section--masthead {
   padding: 0.5em 2em;
 }
@@ -324,12 +318,8 @@ a {
  *
  */
 .section--hero {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-.section--hero h1 {
-  margin: auto;
+  background: #6da4b6;
+  min-height: 500px;
 }
 
 .main-navigation {
@@ -468,6 +458,14 @@ a {
 .site-title .degree-glyph {
   color: #e2600f;
   font-family: 'Open Sans';
+  font-weight: 300;
+}
+
+.more-link {
+  background: #34a7f4;
+  color: white;
+  padding: .5em 1em;
+  border-radius: 2em;
   font-weight: 300;
 }
 
