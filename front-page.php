@@ -12,12 +12,23 @@ get_header(); ?>
   <div id="primary" class="content-area">
     <main id="main" class="content-main" role="main">
 
-      <section id="hero" class="section section--hero">
-        <h1>This is the hero section</h1>
-        <?php wp_nav_menu( array ( 'menu' => 'Front Page Menu' ) ); ?>
+      <section id="welcome" class="section section__welcome">
+        <h1 class="welcome-title"><?php bloginfo( 'title' ); ?></h1>
+        <?php //wp_nav_menu( array ( 'menu' => 'Front Page Menu' ) ); ?>
+        <div class="hero-wrapper">
+          <ul class="hero">
+            <li class="hero__primary">
+              <a class="" href="#"><div class="hero__message">Some infor for you.</div></a>
+            </li>
+            <li class="hero__callout hero__callout--left"><a class="callout-text" href="#">Critical Thinking and Analysis</a></li>
+            <li class="hero__callout hero__callout--center"><a class="callout-text"  href="#"><span>Community Leadership and Action</span></a></li>
+            <li class="hero__callout hero__callout--right"><a class="callout-text" class="" href="#"><span>Social and Emotional Development</span></a></li>
+          </ul>  
+        </div>
+        <a class="btn" href="#organizational-culture">Learn About Youth Organizing</a>
       </section>
 
-    <section id="critical-thinking" class="section">
+      <section id="critical-thinking" class="section">
         <div class="indent">
 
           <?php

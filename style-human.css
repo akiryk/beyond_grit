@@ -305,6 +305,7 @@ a {
  */
 .section {
   padding: 1em calc(50% - 30em );
+  position: relative;
 }
 
 .section--masthead {
@@ -317,9 +318,188 @@ a {
  * Home page hero graphic — the people icon with orbiting concepts
  *
  */
-.section--hero {
-  background: #6da4b6;
-  min-height: 500px;
+.section__welcome {
+  background: #5c930d url(images/village.png) no-repeat center center;
+  background-attachment: fixed;
+  background-size: contain;
+  height: 98vh;
+  z-index: 1;
+}
+
+.welcome-title {
+  color: #fff;
+  font-size: 3.75em;
+  line-height: 1;
+  margin: 0.5rem auto 1.5rem auto;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.4);
+}
+
+.hero-wrapper {
+  padding: 0 calc(50% - 340px);
+}
+
+.hero {
+  height: 400px;
+  font-family: "Amatic";
+  list-style: none;
+  padding: 0 calc(50% - 320px);
+  position: relative;
+  text-align: center;
+}
+
+.hero__primary {
+  background: #d3dcc6;
+  border-radius: 50%;
+  border: 12px solid #203404;
+  height: 300px;
+  width: 300px;
+  position: absolute;
+  margin: 0 auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.hero__message {
+  background: white;
+  border-radius: 100%;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  transition: -webkit-transform .3s ease .1s;
+  transition: transform .3s ease .1s;
+}
+
+.callout-text {
+  font-family: inherit;
+  font-size: 30px;
+  line-height: 1.1;
+  margin: auto;
+  padding: 0.33em;
+  -webkit-transform: translateY(-0.25rem);
+          transform: translateY(-0.25rem);
+  text-transform: uppercase;
+}
+
+.hero__callout {
+  background: #d3dcc6;
+  border-radius: 100px;
+  border: 6px solid #203404;
+  height: 165px;
+  width: 165px;
+  position: absolute;
+  cursor: pointer;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  transition: all 0.3s cubic-bezier(0, 1.6, 1, 0.25);
+}
+
+.hero__callout:before {
+  border-width: 0 60px 72px 60px;
+  border-style: solid;
+  border-color: transparent transparent #203404 transparent;
+  transition: border-width .2s ease;
+  content: '';
+  position: absolute;
+  display: block;
+  height: 0;
+  box-sizing: border-box;
+  width: 130px;
+  z-index: -1;
+}
+
+.hero__callout--primary {
+  border-radius: 50%;
+  border: 12px solid #203404;
+  height: 300px;
+  width: 300px;
+  margin: 0 auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: hidden;
+}
+
+.hero__callout--primary:hover .hero__message {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.hero__message {
+  background: white;
+  border-radius: 100%;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  transition: -webkit-transform .3s ease .1s;
+  transition: transform .3s ease .1s;
+}
+
+.hero__callout span {
+  margin: auto;
+}
+
+.hero__callout--left {
+  top: 200px;
+  left: 0px;
+}
+
+.hero__callout:hover {
+  box-shadow: 0 0 0 5px #203404;
+}
+
+.hero__callout--right {
+  top: 200px;
+  right: 0px;
+}
+
+.hero__callout--center {
+  top: 362px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.hero__callout--left:before {
+  -webkit-transform: translate(90px, -15px) rotate(50deg);
+          transform: translate(90px, -15px) rotate(50deg);
+}
+
+.hero__callout--right:before {
+  -webkit-transform: translate(-55px, -15px) rotate(-50deg);
+          transform: translate(-55px, -15px) rotate(-50deg);
+}
+
+.hero__callout--center:before {
+  -webkit-transform: translate(18px, -50px);
+          transform: translate(18px, -50px);
+}
+
+.btn {
+  position: absolute;
+  bottom: 2rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding: .5em 1.5em;
+  border-radius: 5px;
+  width: 300px;
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.75);
+  font-weight: 700;
+  background: #FFC85B;
+  text-align: center;
 }
 
 .main-navigation {
@@ -463,10 +643,18 @@ a {
 
 .more-link {
   background: #34a7f4;
-  color: white;
-  padding: .5em 1em;
   border-radius: 2em;
+  color: white;
+  display: inline-block;
   font-weight: 300;
+  margin: 2em 0;
+  padding: .5em 1em;
+}
+
+.section-title {
+  font-size: 2.75em;
+  line-height: 1;
+  margin-bottom: 0.25em;
 }
 
 /*# sourceMappingURL=style-human.css.map */

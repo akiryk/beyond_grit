@@ -24,24 +24,20 @@
 <div id="page" class="hfeed site">
   <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'beyond_grit' ); ?></a>
 
-  <header id="masthead" class="site-header section--masthead" role="banner">
+  <?php if ( !is_front_page() ) { ?>
+
+    <header id="masthead" class="site-header section--masthead" role="banner">
     <div class="site-branding">
-      <?php if ( is_front_page() && is_home() ) : ?>
-        <h1 class="site-title"><?php bloginfo( 'title' ); ?></h1>
-      <?php else : ?>
-        <p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'title' ); ?></a></p>
-      <?php endif; ?>
+      <p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'title' ); ?></a></p>
       <p class="site-description"><?php bloginfo( 'description' ); ?></p>
     </div><!-- .site-branding -->
 
     <nav id="site-navigation" class="main-navigation" role="navigation">
       <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'beyond_grit' ); ?></button>
-      <?php
-      if ( !is_front_page() ) {
-        wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) );
-      }
-      ?>
+      <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
     </nav><!-- #site-navigation -->
   </header><!-- #masthead -->
+  
+  <?php } ?>
 
   <div id="content" class="site-content">
