@@ -253,6 +253,15 @@ th {
  * brings everything to a baseline that aligns with this theme's styles.
  *
  */
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 body,
 button,
 input,
@@ -502,6 +511,44 @@ a {
   text-align: center;
 }
 
+/*
+ * Frontpage
+ *
+ * Sections on the front page, not including the hero.
+ * For hero styles,  see _hero.scss.
+ *
+ */
+.section--frontpage {
+  -webkit-align-items: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+
+.section--frontpage__entry-title {
+  -webkit-flex: 1 1 100%;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
+}
+
+.section--frontpage__entry {
+  -webkit-flex: 1 0 66.66667%;
+      -ms-flex: 1 0 66.66667%;
+          flex: 1 0 66.66667%;
+}
+
+.section--frontpage__resources {
+  -webkit-flex: 1 0 33.33333%;
+      -ms-flex: 1 0 33.33333%;
+          flex: 1 0 33.33333%;
+  padding-left: 4em;
+}
+
 .main-navigation {
   clear: both;
   display: block;
@@ -654,7 +701,7 @@ a {
 .section-title {
   font-size: 2.75em;
   line-height: 1;
-  margin-bottom: 0.25em;
+  margin: 0.25em 0;
 }
 
 /*# sourceMappingURL=style-human.css.map */

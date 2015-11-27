@@ -25,7 +25,6 @@
   <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'beyond_grit' ); ?></a>
 
   <?php if ( !is_front_page() ) { ?>
-
     <header id="masthead" class="site-header section--masthead" role="banner">
     <div class="site-branding">
       <p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'title' ); ?></a></p>
@@ -37,7 +36,6 @@
       <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
     </nav><!-- #site-navigation -->
   </header><!-- #masthead -->
-  
   <?php } ?>
 
   <div id="content" class="site-content">

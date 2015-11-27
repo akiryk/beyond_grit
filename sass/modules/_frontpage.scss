@@ -1,0 +1,26 @@
+/*
+ * Frontpage
+ *
+ * Sections on the front page, not including the hero.
+ * For hero styles,  see _hero.scss.
+ *
+ */
+
+.section--frontpage {
+	align-items: baseline;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.section--frontpage__entry-title {
+	flex: 1 1 100%;
+}
+
+.section--frontpage__entry {
+	flex: 1 0 percentage(2/3);
+}
+
+.section--frontpage__resources {
+	flex: 1 0 percentage(1/3);
+	padding-left: 4em;
+}
