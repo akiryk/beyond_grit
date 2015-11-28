@@ -1,10 +1,10 @@
 .section--home-navigation {
-	background: #444;
+	background: #004b2f;
 	padding: 0;
 }
 
 .menu--home {
-	color: #ccc;
+	color: #aac680;
 	display: flex;
 	font-size: 14px;
 	justify-content: center;
@@ -15,10 +15,16 @@
 }
 
 .menu--home > li {
-	padding: 0 1em;
+	
 }
 
 .menu--home a {
 	display: inline-block;
-	padding: 0.65em 0;
+	padding: 0.65em 1.5em;
+	transition: all .2s;
+
+	&:hover {
+		background: rgba(0,0,0,0.25);
+		color: #dde8cc;
+	}
 }

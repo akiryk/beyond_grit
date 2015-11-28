@@ -28,6 +28,7 @@
 .fonts-loaded .resources__title {
 	font-family: 'Open Sans', sans-serif;
 	letter-spacing: .2px;
+	margin: 2px 0;
 	text-transform: uppercase;
 }
 
@@ -49,4 +50,9 @@
     font-weight: 300;
     margin-top: 1rem;
     padding: .5em 1em;
+    transition: background .25s;
+
+    &:hover {
+    	background: $color__callout-fill;
+    }
 }
