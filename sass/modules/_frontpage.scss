@@ -7,13 +7,20 @@
  */
 
 .section--frontpage {
+	
+}
+
+.inner-section {
+	background: $color__inner-section;
 	align-items: baseline;
 	display: flex;
 	flex-wrap: wrap;
+	padding: 2em;
 }
 
 .section--frontpage__entry-title {
 	flex: 1 1 100%;
+	text-transform: uppercase;
 }
 
 .section--frontpage__entry {
@@ -43,16 +50,35 @@
 	}
 }
 
+#critical-thinking > .inner-section {
+	background: $color__inner-section url(images/critical-thinking.png) no-repeat right bottom;
+	background-size: 174px 188px;
+}
+
+#community > .inner-section {
+	background: $color__inner-section url(images/community.png) no-repeat right bottom;
+	background-size: 320px 188px;
+}
+
+#social-emotional > .inner-section {
+	background: $color__inner-section url(images/social.png) no-repeat right bottom;
+	background-size: 124px 188px;
+}
+
 .more-link {
-	background: $color__blue-link;
-    color: white;
+	border: 2px solid #0089c9;
+    color: #0089c9;
     display: inline-block;
-    font-weight: 300;
+    font-family: 'Londrina Solid', sans-serif;
+    font-size: 20px;
+    letter-spacing: 1px;
     margin-top: 1rem;
-    padding: .5em 1em;
-    transition: background .25s;
+    padding: .25em 1.25em;
+    transition: all .25s;
+    text-transform: uppercase;
 
     &:hover {
-    	background: $color__callout-fill;
+    	background: #0089c9;
+    	color: white;
     }
 }

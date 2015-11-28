@@ -34,7 +34,7 @@ get_header(); ?>
       </section>
 
       <section id="critical-thinking" class="section section--frontpage">
-
+        <div class="inner-section">
         <?php
           // the loop
           $query = new WP_query( 'pagename=critical-thinking' );
@@ -53,10 +53,11 @@ get_header(); ?>
 
           wp_reset_postdata();
         ?>
-
+        </div>
       </section>
 
       <section id="community" class="section section--frontpage">
+        <div class="inner-section">
         <?php
           // the loop
           $query = new WP_query( 'pagename=community-leadership-and-action' );
@@ -75,9 +76,10 @@ get_header(); ?>
 
           wp_reset_postdata();
         ?>
-
+        </div>
       </section>
       <section id="social-emotional" class="section section--frontpage">
+        <div class="inner-section">
         <?php
           // the loop
           $query = new WP_query( 'pagename=social-and-emotional-development' );
@@ -126,10 +128,10 @@ get_header(); ?>
           */
 
         ?>
-
+        </div>
       </section>
       <section id="organizational-culture" class="section section--frontpage">
-
+        <div class="inner-section">
          <?php
           // the loop
           $query = new WP_query( 'pagename=organizational-culture' );
@@ -148,7 +150,7 @@ get_header(); ?>
 
           wp_reset_postdata();
         ?>
-
+        </div>
       </section>
 
     </main><!-- #main -->

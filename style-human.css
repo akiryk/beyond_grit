@@ -263,7 +263,7 @@ html {
 }
 
 body {
-  background: #ece7cc;
+  background: #ded2a3;
 }
 
 body,
@@ -303,7 +303,7 @@ h6 {
 .fonts-loaded h4,
 .fonts-loaded h5,
 .fonts-loaded h6 {
-  font-family: "Amatic SC", sans-serif;
+  font-family: "Londrina Solid", sans-serif;
 }
 
 a {
@@ -323,7 +323,7 @@ p {
  */
 .section,
 .footer {
-  padding: 1em calc(50% - 30em );
+  padding: 2em calc(50% - 32em );
   position: relative;
 }
 
@@ -342,17 +342,17 @@ p {
 }
 
 .section__welcome {
-  background: #578d18 url(images/amatic-village-optimized-alt.svg) no-repeat;
+  background: #4e880c url(images/londrino-village-optimised_405.svg) no-repeat;
   background-position: center -36px;
   background-attachment: fixed;
-  background-size: 1400px 510px;
-  height: 586px;
+  background-size: 1800px 610px;
+  min-height: 580px;
   padding: 0.5rem;
   z-index: 1;
 }
 
 .welcome-title {
-  color: #fad023;
+  color: #2b3501;
   font-size: 4em;
   letter-spacing: 1px;
   line-height: 1;
@@ -364,8 +364,10 @@ p {
 }
 
 .fonts-loaded .welcome-title {
-  font-size: 4em;
+  font-size: 3.5em;
+  font-weight: 400;
   margin: 0 auto 0.5rem auto;
+  text-transform: uppercase;
 }
 
 .welcome-subtitle {
@@ -382,14 +384,14 @@ p {
 
 .hero {
   height: 400px;
-  font-family: "Amatic SC", sans-serif;
+  font-family: "Open Sans Condensed", sans-serif;
   list-style: none;
   position: relative;
   text-align: center;
 }
 
 .hero__primary {
-  background: transparent url(images/amatic-figures-optimized.svg) no-repeat center center;
+  background: transparent url(images/londrino-figures-optimized.svg) no-repeat center center;
   height: 252px;
   width: 247px;
   position: absolute;
@@ -415,10 +417,10 @@ p {
 
 .callout-text {
   font-family: inherit;
-  font-size: 29px;
+  font-size: 18px;
   font-weight: 400;
-  letter-spacing: 1.25px;
-  line-height: 1.15;
+  letter-spacing: 0.25px;
+  line-height: 1.3;
   margin: auto;
   padding: 0.33em;
   -webkit-transform: translateY(-0.25rem);
@@ -426,12 +428,12 @@ p {
 }
 
 .hero__callout {
-  background: #3b2d00;
+  background: #e3d9b2;
   border-radius: 100px;
-  border: 6px solid #3b2d00;
-  color: #a6996a;
-  height: 164px;
-  width: 164px;
+  border: 6px solid #2b3501;
+  color: #2b3501;
+  height: 150px;
+  width: 150px;
   position: absolute;
   cursor: pointer;
   display: -webkit-flex;
@@ -440,14 +442,11 @@ p {
   transition: all 0.3s cubic-bezier(0, 1.6, 1, 0.25);
   top: 176px;
 }
-.hero__callout:hover {
-  color: #dbcf9a;
-}
 
 .hero__callout:before {
-  border-width: 0 60px 72px 60px;
+  border-width: 0 60px 88px 60px;
   border-style: solid;
-  border-color: transparent transparent #3b2d00 transparent;
+  border-color: transparent transparent #2b3501 transparent;
   transition: border-width .2s ease;
   content: '';
   position: absolute;
@@ -460,7 +459,7 @@ p {
 
 .hero__callout--primary {
   border-radius: 50%;
-  border: 12px solid #3b2d00;
+  border: 12px solid #2b3501;
   height: 300px;
   width: 300px;
   margin: 0 auto;
@@ -497,25 +496,25 @@ p {
 }
 
 .hero__callout--center {
-  top: 280px;
+  top: 294px;
   left: 0;
   right: 0;
   margin: auto;
 }
 
 .hero__callout--left:before {
-  -webkit-transform: translate(77px, -15px) rotate(50deg);
-          transform: translate(77px, -15px) rotate(50deg);
+  -webkit-transform: translate(72px, -20px) rotate(56deg);
+          transform: translate(72px, -20px) rotate(56deg);
 }
 
 .hero__callout--center:before {
-  -webkit-transform: translate(11px, -46px);
-          transform: translate(11px, -46px);
+  -webkit-transform: translate(4px, -57px);
+          transform: translate(4px, -57px);
 }
 
 .hero__callout--right:before {
-  -webkit-transform: translate(-55px, -15px) rotate(-50deg);
-          transform: translate(-55px, -15px) rotate(-50deg);
+  -webkit-transform: translate(-63px, -20px) rotate(-56deg);
+          transform: translate(-63px, -20px) rotate(-56deg);
 }
 
 .btn {
@@ -541,7 +540,8 @@ p {
  * For hero styles,  see _hero.scss.
  *
  */
-.section--frontpage {
+.inner-section {
+  background: #ece5cb;
   -webkit-align-items: baseline;
       -ms-flex-align: baseline;
           align-items: baseline;
@@ -551,12 +551,14 @@ p {
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
+  padding: 2em;
 }
 
 .section--frontpage__entry-title {
   -webkit-flex: 1 1 100%;
       -ms-flex: 1 1 100%;
           flex: 1 1 100%;
+  text-transform: uppercase;
 }
 
 .section--frontpage__entry {
@@ -585,21 +587,40 @@ p {
   list-style: none;
 }
 .resource-links a {
-  color: #004b8b;
+  color: #0089c9;
   font-size: 14px;
 }
 
+#critical-thinking > .inner-section {
+  background: #ece5cb url(images/critical-thinking.png) no-repeat right bottom;
+  background-size: 174px 188px;
+}
+
+#community > .inner-section {
+  background: #ece5cb url(images/community.png) no-repeat right bottom;
+  background-size: 320px 188px;
+}
+
+#social-emotional > .inner-section {
+  background: #ece5cb url(images/social.png) no-repeat right bottom;
+  background-size: 124px 188px;
+}
+
 .more-link {
-  background: #004b8b;
-  color: white;
+  border: 2px solid #0089c9;
+  color: #0089c9;
   display: inline-block;
-  font-weight: 300;
+  font-family: 'Londrina Solid', sans-serif;
+  font-size: 20px;
+  letter-spacing: 1px;
   margin-top: 1rem;
-  padding: .5em 1em;
-  transition: background .25s;
+  padding: .25em 1.25em;
+  transition: all .25s;
+  text-transform: uppercase;
 }
 .more-link:hover {
-  background: #3b2d00;
+  background: #0089c9;
+  color: white;
 }
 
 .main-navigation {
@@ -728,7 +749,7 @@ p {
 }
 
 .fonts-loaded .site-title {
-  font-family: "Amatic SC", sans-serif;
+  font-family: "Londrina Solid", sans-serif;
 }
 
 .site-title .first-word {
@@ -742,7 +763,7 @@ p {
 }
 
 .section--home-navigation {
-  background: #004b2f;
+  background: #2b3501;
   padding: 0;
 }
 
@@ -771,16 +792,17 @@ p {
 }
 
 .section-title {
-  font-size: 42px;
-  letter-spacing: .5px;
+  color: #2b3501;
+  font-size: 30px;
+  letter-spacing: 1px;
   line-height: 1;
   margin: 0.25em 0;
 }
 
 .footer {
-  background-color: #3b2d00;
+  background-color: #2b3501;
   text-align: center;
-  color: #a6996a;
+  color: #2b3501;
   font-size: 13px;
   padding: 24px 0 240px 0;
 }

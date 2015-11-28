@@ -12,17 +12,17 @@
 }
 
 .section__welcome {
-	background: #578d18 url(images/amatic-village-optimized-alt.svg) no-repeat;
+	background:#4e880c url(images/londrino-village-optimised_405.svg) no-repeat;
   background-position: center -36px;
 	background-attachment:fixed;
-	background-size: 1400px 510px;
-	height: 586px;
+	background-size: 1800px 610px;
+  min-height: 580px;
   padding: 0.5rem;
   z-index:1;
 }
 
 .welcome-title {
-	color: #fad023;
+	color: #2b3501;
 	font-size: 4em;
   letter-spacing: 1px;
 	line-height: 1;
@@ -35,8 +35,10 @@
 }
 
 .fonts-loaded .welcome-title {
-  font-size: 4em;
+  font-size: 3.5em;
+  font-weight: 400;
   margin: 0 auto 0.5rem auto;
+  text-transform: uppercase;
 }
 
 .welcome-subtitle {
@@ -53,15 +55,14 @@
 
 .hero {
   height: 400px;
-  font-family: "Amatic SC", sans-serif;
+  font-family: $font__headings--alt;
   list-style: none;
-  // padding:0 calc(50% - 320px);
   position: relative;
   text-align: center;
 }
 
 .hero__primary {
-  background: transparent url(images/amatic-figures-optimized.svg) no-repeat center center;
+  background: transparent url(images/londrino-figures-optimized.svg) no-repeat center center;
   height: 252px;
   width: 247px;
   position: absolute;
@@ -85,10 +86,10 @@
 
 .callout-text {
 	font-family: inherit;
-  font-size: 29px;
+  font-size: 18px;
   font-weight: 400;
-  letter-spacing: 1.25px;
-  line-height: 1.15;
+  letter-spacing: 0.25px;
+  line-height: 1.3;
   margin: auto;
   padding:0.33em;
   transform: translateY(-0.25rem);
@@ -96,25 +97,21 @@
 }
 
 .hero__callout {
-  background: $color__callout-fill;
+  background: #e3d9b2;
   border-radius: 100px;
   border: 6px solid $color__callout-stroke;
   color: $color__callout-text;
-  height: 164px;
-  width: 164px;
+  height: 150px;
+  width: 150px;
   position: absolute;
   cursor: pointer;
   display: flex;
   transition: all .3s cubic-bezier(0,1.6,1,0.25);
   top: 176px;
-
-  &:hover {
-    color: #dbcf9a;
-  }
 }
 
 .hero__callout:before {
-  border-width: 0 60px 72px 60px;
+  border-width: 0 60px 88px 60px;
   border-style: solid;
   border-color: transparent transparent $color__callout-fill transparent;
   transition: border-width .2s ease;
@@ -138,10 +135,6 @@
   bottom: 0; 
   right: 0;
   overflow: hidden;
-}
-
-.hero__callout--primary:hover .hero__message{
-  //transform: scale(1.0);
 }
 
 .hero__message {
@@ -168,22 +161,22 @@
 }
 
 .hero__callout--center {  
-  top: 280px;
+  top: 294px;
   left:0;
   right: 0;
   margin: auto;
 }
 
 .hero__callout--left:before{
-  transform: translate(77px,-15px) rotate(50deg);
+  transform: translate(72px,-20px) rotate(56deg);
 }
 
 .hero__callout--center:before{
-  transform: translate(11px,-46px);
+  transform: translate(4px,-57px);
 }
 
 .hero__callout--right:before{
-  transform: translate(-55px,-15px) rotate(-50deg);
+  transform: translate(-63px,-20px) rotate(-56deg);
 }
 
 .btn {

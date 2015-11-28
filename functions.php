@@ -131,7 +131,7 @@ function beyond_grit_scripts() {
 
   wp_enqueue_style( 'beyond_grit-style', get_stylesheet_uri() );
 
-  wp_enqueue_style( 'beyond_grit-fonts', 'https://fonts.googleapis.com/css?family=Amatic+SC:700,400|Open+Sans+Condensed:700|Open+Sans:400,400italic,700,700italic');
+  wp_enqueue_style( 'beyond_grit-fonts', 'https://fonts.googleapis.com/css?family=Londrina+Solid|Open+Sans+Condensed:700|Open+Sans:400,400italic,700,700italic');
 
   if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
     wp_enqueue_script( 'comment-reply' );
