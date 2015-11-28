@@ -6,7 +6,8 @@
  */
 
 
-.section {
+.section,
+.footer {
   padding: 1em calc(50% - #{$desktop-content-width/2} );
   position: relative;
 }

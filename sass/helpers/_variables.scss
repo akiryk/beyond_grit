@@ -8,10 +8,10 @@ $desktop-content-width: 60em;
 # Fonts
 --------------------------------------------------------------*/
 
-$font__main: serif;
-$font__main--webfont: "Open Sans", serif;
+$font__main: sans-serif;
+$font__main--webfont: "Open Sans", sans-serif;
 $font__headings: sans-serif;
-$font__headings--webfont:"Amatic SC", "hwt artz", "Open Sans Condensed", sans-serif;
+$font__headings--webfont:"Amatic SC", sans-serif;
 $font__code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 $font__pre: "Courier 10 Pitch", Courier, monospace;
 $font__line-height-body: 1.6;
@@ -26,3 +26,6 @@ $color__background-body: #fff;
 $color__background-screen: #f1f1f1;
 $color__text-main: #404040;
 $color__text-screen: #21759b;
+$color__callout-fill: #3b2d00;
+$color__callout-stroke: #3b2d00;
+$color__blue-link: #0089c9;

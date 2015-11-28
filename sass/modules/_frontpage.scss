@@ -17,10 +17,36 @@
 }
 
 .section--frontpage__entry {
-	flex: 1 0 percentage(2/3);
+	flex: 0 0 percentage(2/3);
 }
 
 .section--frontpage__resources {
 	flex: 1 0 percentage(1/3);
 	padding-left: 4em;
+}
+
+.fonts-loaded .resources__title {
+	font-family: 'Open Sans', sans-serif;
+	letter-spacing: .2px;
+	text-transform: uppercase;
+}
+
+.resource-links {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+	a {
+		color: $color__blue-link;
+		font-size: 14px;
+	}
+}
+
+.more-link {
+	background: $color__blue-link;
+    color: white;
+    display: inline-block;
+    font-weight: 300;
+    margin-top: 1rem;
+    padding: .5em 1em;
 }

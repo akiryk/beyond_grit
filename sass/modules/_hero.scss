@@ -5,26 +5,52 @@
  *
  */
 
+
+
+.logged-in .section__welcome {
+  background-position: center 32px, center 32px;
+}
 .section__welcome {
-	background: $color__background-hero url(images/village.png) no-repeat center center;
+	background-image: url(images/amatic-village-optimized_430.svg),
+    linear-gradient(to bottom, #cab86a 301px, #578d18 0%),;
+    // $color__background-hero 
+  background-repeat: no-repeat, repeat-x;
+  background-position: center top, center top;
 	background-attachment:fixed;
-	background-size: contain;
-	height: 98vh;
+	background-size: 1376px 552px;
+	height: 552px;
+  padding: 0.5rem;
   z-index:1;
 }
 
 .welcome-title {
-	color: #fff;
-	font-size: 3.75em;
+	color: rgba(255,255,255,0.8);
+	font-size: 4em;
+  letter-spacing: 1px;
 	line-height: 1;
-	margin: 0.5rem auto 1.5rem auto;
+	margin: 0 auto 0.5rem auto;
 	text-align: center;
-	text-transform: uppercase;
-	text-shadow: 1px 1px 0 rgba(0,0,0,0.4);
+   // if fonts aren't loaded..
+  font-size: 40px;
+  font-family: sans-serif;
+  margin: 18px auto;
+}
+
+.fonts-loaded .welcome-title {
+  font-size: 4em;
+  margin: 0 auto 0.5rem auto;
+}
+
+.welcome-subtitle {
+  color: #3b2d00;
+  display: block;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
 }
 
 .hero-wrapper {
-	padding: 0 calc(50% - 340px);
+	padding: 0 calc(50% - 260px);
 }
 
 .hero {
@@ -37,11 +63,9 @@
 }
 
 .hero__primary {
-  background: #d3dcc6;
-  border-radius: 50%;
-  border: 12px solid #203404;
-  height: 300px;
-  width: 300px;
+  background: transparent url(images/amatic-figures-optimized.svg) no-repeat center center;
+  height: 228px;
+  width: 224px;
   position: absolute;
   margin: 0 auto;
   top: 0; 
@@ -63,31 +87,33 @@
 
 .callout-text {
 	font-family: inherit;
-  // font-size: 1.875em;
-  font-size: 30px;
+  font-size: 1.75em;
+  letter-spacing: 1.25px;
   line-height: 1.1;
   margin: auto;
   padding:0.33em;
   transform: translateY(-0.25rem);
-  text-transform: uppercase;
+  // text-transform: uppercase;
 }
 
 .hero__callout {
-  background: #d3dcc6;
+  background: $color__callout-fill;
   border-radius: 100px;
-  border: 6px solid #203404;
-  height: 165px;
-  width: 165px;
+  border: 6px solid $color__callout-stroke;
+  color: rgba(255,255,255,0.6);
+  height: 152px;
+  width: 152px;
   position: absolute;
   cursor: pointer;
   display: flex;
   transition: all .3s cubic-bezier(0,1.6,1,0.25);
+  top: 166px;
 }
 
 .hero__callout:before {
   border-width: 0 60px 72px 60px;
   border-style: solid;
-  border-color: transparent transparent #203404 transparent;
+  border-color: transparent transparent $color__callout-fill transparent;
   transition: border-width .2s ease;
   content: '';
   position: absolute;
@@ -100,7 +126,7 @@
 
 .hero__callout--primary {
   border-radius: 50%;
-  border: 12px solid #203404;
+  border: 12px solid $color__callout-stroke;
   height: 300px;
   width: 300px;
   margin: 0 auto;
@@ -112,7 +138,7 @@
 }
 
 .hero__callout--primary:hover .hero__message{
-  transform: scale(1.0);
+  //transform: scale(1.0);
 }
 
 .hero__message {
@@ -130,38 +156,36 @@
   margin: auto;
 }
 
-.hero__callout--left {
-  top: 200px; 
-  left: 0px;
+.hero__callout--left { 
+  left: 6px;
 }
 
 .hero__callout:hover {
-  box-shadow: 0 0 0 5px #203404;
+  //box-shadow: 0 0 0 5px #203404;
 }
 
 
 .hero__callout--right {
-  top: 200px; 
   right: 0px;  
 }
 
 .hero__callout--center {  
-  top: 362px;
+  top: 260px;
   left:0;
   right: 0;
   margin: auto;
 }
 
 .hero__callout--left:before{
-  transform: translate(90px,-15px) rotate(50deg);
-}
-
-.hero__callout--right:before{
-  transform: translate(-55px,-15px) rotate(-50deg);
+  transform: translate(63px,-15px) rotate(50deg);
 }
 
 .hero__callout--center:before{
-  transform: translate(18px,-50px);
+  transform: translate(5px,-42px);
+}
+
+.hero__callout--right:before{
+  transform: translate(-53px,-15px) rotate(-50deg);
 }
 
 .btn {

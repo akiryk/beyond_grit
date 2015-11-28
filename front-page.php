@@ -13,19 +13,24 @@ get_header(); ?>
     <main id="main" class="content-main" role="main">
 
       <section id="welcome" class="section section__welcome">
-        <h1 class="welcome-title"><?php bloginfo( 'title' ); ?></h1>
-        <?php //wp_nav_menu( array ( 'menu' => 'Front Page Menu' ) ); ?>
+        <h1 class="welcome-title">Powerful Youth, Powerful Communities</h1>
+        <a href="#" class="welcome-subtitle">A Resource For Learning About Youth Organizing</a>
         <div class="hero-wrapper">
           <ul class="hero">
             <li class="hero__primary">
               <a class="" href="#"><div class="hero__message">Some infor for you.</div></a>
             </li>
-            <li class="hero__callout hero__callout--left"><a class="callout-text" href="#">Critical Thinking and Analysis</a></li>
-            <li class="hero__callout hero__callout--center"><a class="callout-text"  href="#"><span>Community Leadership and Action</span></a></li>
-            <li class="hero__callout hero__callout--right"><a class="callout-text" class="" href="#"><span>Social and Emotional Development</span></a></li>
+            <li class="hero__callout hero__callout--left"><a class="callout-text" href="#critical-thinking">Critical Thinking and Analysis</a></li>
+            <li class="hero__callout hero__callout--center"><a class="callout-text"  href="#community">Community Leadership and Action</a></li>
+            <li class="hero__callout hero__callout--right"><a class="callout-text" class="" href="#social-emotional">Social and Emotional Development</a></li>
           </ul>  
         </div>
-        <a class="btn" href="#organizational-culture">Learn About Youth Organizing</a>
+      </section>
+
+      <section class="section section--home-navigation">
+        <nav>
+          <?php wp_nav_menu( array ( 'menu' => 'Front Page Menu', 'menu_class' => 'menu menu--home',) ); ?>
+        </nav>  
       </section>
 
       <section id="critical-thinking" class="section section--frontpage">
@@ -132,7 +137,7 @@ get_header(); ?>
             while( $query->have_posts() ){
               $query->the_post();
               echo '<h2 class="section-title section--frontpage__entry-title">' . get_the_title() . '</h2>';
-              echo '<div class="entry-content ">';
+              echo '<div class="entry-content section--frontpage__entry">';
               the_content();
               echo '</div>';
             }
