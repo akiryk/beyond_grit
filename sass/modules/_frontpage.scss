@@ -7,7 +7,7 @@
  */
 
 .section--frontpage {
-	
+
 }
 
 .inner-section {
@@ -16,6 +16,7 @@
 	display: flex;
 	flex-wrap: wrap;
 	padding: 2em;
+	position: relative;
 }
 
 .section--frontpage__entry-title {
@@ -56,8 +57,8 @@
 }
 
 #community > .inner-section {
-	background: $color__inner-section url(images/community.png) no-repeat right bottom;
-	background-size: 320px 188px;
+	// background: $color__inner-section url(images/community.png) no-repeat right bottom;
+	// background-size: 320px 188px;
 }
 
 #social-emotional > .inner-section {
@@ -81,4 +82,10 @@
     	background: #0089c9;
     	color: white;
     }
+}
+
+.category-image {
+	position: absolute;
+	bottom: -40px;
+	right: 0;
 }

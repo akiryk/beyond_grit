@@ -10,28 +10,29 @@
 get_header(); ?>
 
   <div id="primary" class="content-area">
+
+    <header id="welcome" class="section section__welcome">
+      <h1 class="welcome-title">Powerful Youth, Powerful Communities</h1>
+      <a href="#" class="welcome-subtitle">A Resource For Learning About Youth Organizing</a>
+      <div class="hero-wrapper">
+        <ul class="hero">
+          <li class="hero__primary">
+            <a class="" href="#"><div class="hero__message">Some infor for you.</div></a>
+          </li>
+          <li class="hero__callout hero__callout--left"><a class="callout-text" href="#critical-thinking">Critical Thinking and Analysis</a></li>
+          <li class="hero__callout hero__callout--center"><a class="callout-text"  href="#community">Community Leadership and Action</a></li>
+          <li class="hero__callout hero__callout--right"><a class="callout-text" class="" href="#social-emotional">Social and Emotional Development</a></li>
+        </ul>  
+      </div>
+    </header>
+
+    <section class="section section--home-navigation">
+      <nav>
+        <?php wp_nav_menu( array ( 'menu' => 'Front Page Menu', 'menu_class' => 'menu menu--home',) ); ?>
+      </nav>  
+    </section>
+    
     <main id="main" class="content-main" role="main">
-
-      <section id="welcome" class="section section__welcome">
-        <h1 class="welcome-title">Powerful Youth, Powerful Communities</h1>
-        <a href="#" class="welcome-subtitle">A Resource For Learning About Youth Organizing</a>
-        <div class="hero-wrapper">
-          <ul class="hero">
-            <li class="hero__primary">
-              <a class="" href="#"><div class="hero__message">Some infor for you.</div></a>
-            </li>
-            <li class="hero__callout hero__callout--left"><a class="callout-text" href="#critical-thinking">Critical Thinking and Analysis</a></li>
-            <li class="hero__callout hero__callout--center"><a class="callout-text"  href="#community">Community Leadership and Action</a></li>
-            <li class="hero__callout hero__callout--right"><a class="callout-text" class="" href="#social-emotional">Social and Emotional Development</a></li>
-          </ul>  
-        </div>
-      </section>
-
-      <section class="section section--home-navigation">
-        <nav>
-          <?php wp_nav_menu( array ( 'menu' => 'Front Page Menu', 'menu_class' => 'menu menu--home',) ); ?>
-        </nav>  
-      </section>
 
       <section id="critical-thinking" class="section section--frontpage">
         <div class="inner-section">
@@ -76,6 +77,10 @@ get_header(); ?>
 
           wp_reset_postdata();
         ?>
+
+        <img src="http://localhost:8888/r2a/wp-content/uploads/2015/11/community.png" 
+          class="category-image" width="276" height="168" />
+
         </div>
       </section>
       <section id="social-emotional" class="section section--frontpage">

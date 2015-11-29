@@ -8,10 +8,14 @@
 
 .section,
 .footer {
-  padding: 2em calc(50% - #{$desktop-content-width/2} );
+  padding: 1.5em calc(50% - #{$desktop-content-width/2} );
   position: relative;
 }
 
 .section--masthead {
   padding: 0.5em 2em;
+}
+
+.content-main {
+	padding: 2em 0;
 }
