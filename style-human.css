@@ -263,7 +263,7 @@ html {
 }
 
 body {
-  background: #ded2a3;
+  background: #ece7cc;
 }
 
 body,
@@ -332,7 +332,7 @@ p {
 }
 
 .content-main {
-  padding: 2em 0;
+  padding: 1em 0;
 }
 
 /*
@@ -545,10 +545,11 @@ p {
  *
  */
 .inner-section {
-  background: #ece5cb;
   -webkit-align-items: baseline;
       -ms-flex-align: baseline;
           align-items: baseline;
+  background-color: #fefaf0;
+  border: 1px solid #fff;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -557,6 +558,19 @@ p {
           flex-wrap: wrap;
   padding: 2em;
   position: relative;
+}
+.inner-section:before {
+  border-radius: 100px / 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+  content: '';
+  width: 90%;
+  margin: 0 auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100px;
+  z-index: -2;
 }
 
 .section--frontpage__entry-title {
@@ -597,12 +611,12 @@ p {
 }
 
 #critical-thinking > .inner-section {
-  background: #ece5cb url(images/critical-thinking.png) no-repeat right bottom;
+  background: #fefaf0 url(images/critical-thinking.png) no-repeat right bottom;
   background-size: 174px 188px;
 }
 
 #social-emotional > .inner-section {
-  background: #ece5cb url(images/social.png) no-repeat right bottom;
+  background: #fefaf0 url(images/social.png) no-repeat right bottom;
   background-size: 124px 188px;
 }
 

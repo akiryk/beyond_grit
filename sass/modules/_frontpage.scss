@@ -11,12 +11,27 @@
 }
 
 .inner-section {
-	background: $color__inner-section;
 	align-items: baseline;
+	background-color: #fefaf0;
+	border: 1px solid #fff;
 	display: flex;
 	flex-wrap: wrap;
 	padding: 2em;
 	position: relative;
+
+	&:before {
+		border-radius: 100px / 10px;
+		box-shadow: 0 0 15px rgba(0,0,0,0.6);
+		content: '';
+		width: 90%;
+		margin: 0 auto;
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		height: 100px;
+		z-index: -2;
+	}	
 }
 
 .section--frontpage__entry-title {
