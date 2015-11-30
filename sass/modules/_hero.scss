@@ -8,17 +8,38 @@
 
 
 .logged-in .section__welcome {
-  background-position: center top;
+  &:before {
+    background-position: center top;  
+  }
+  
 }
 
 .section__welcome {
-	background: #578d18 url(images/amatic-village-optimized_1130.svg) no-repeat;
-  background-position: center -36px;
-	background-attachment:fixed;
-	background-size: 1400px 510px;
+	// background:  url(images/amatic-village-optimized_1130.svg) no-repeat;
+  //background-position: center -36px;
+	//background-attachment:fixed;
+	// background-size: 1400px 510px;
+  background-color: #578d18;
 	height: 586px;
   padding: 0.5rem;
   z-index:1;
+  overflow: hidden; // added for pseudo-element
+  position: relative; // added for pseudo-element
+
+  // Fixed-position background image
+  &::before {
+    content: ' ';
+    position: fixed; // instead of background-attachment
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    background: url(images/amatic-village-optimized_1130.svg) no-repeat center -36px;
+    background-size: 1400px 510px;
+    will-change: transform; // creates a new paint layer
+    z-index: -1;
+  }
 }
 
 .welcome-title {
@@ -108,7 +129,7 @@
   transition: all .3s cubic-bezier(0,1.6,1,0.25);
   top: 176px;
 
-  &:hover {
+  &:hover > .callout-text {
     color: #dbcf9a;
   }
 }
