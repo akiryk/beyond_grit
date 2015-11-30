@@ -352,7 +352,7 @@ p {
 }
 
 .welcome-title {
-  color: #fad023;
+  color: #fff;
   font-size: 4em;
   letter-spacing: 1px;
   line-height: 1;
@@ -541,16 +541,12 @@ p {
  * For hero styles,  see _hero.scss.
  *
  */
-.section--frontpage {
-  -webkit-align-items: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
+.section--frontpage:nth-child(3) {
+  padding-top: 2em;
+}
+
+.section--frontpage:last-of-type {
+  padding-bottom: 2em;
 }
 
 .section--frontpage__entry-title {
@@ -570,6 +566,35 @@ p {
       -ms-flex: 1 0 33.33333%;
           flex: 1 0 33.33333%;
   padding-left: 4em;
+}
+
+.inner-section {
+  -webkit-align-items: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  background-color: #fefaf0;
+  border: 1px solid #fff;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  padding: 1em 2em;
+  position: relative;
+}
+.inner-section:before {
+  border-radius: 100px / 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+  content: '';
+  width: 90%;
+  margin: 0 auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100px;
+  z-index: -2;
 }
 
 .fonts-loaded .resources__title {
