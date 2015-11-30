@@ -78,7 +78,9 @@ get_header(); ?>
           wp_reset_postdata();
         ?>
 
-        <img src="http://localhost:8888/r2a/wp-content/uploads/2015/11/community.png" 
+        <!-- http://stage.research2action.net/wp-content/uploads/2015/11/community.png -->
+        <!-- http://localhost:8888/r2a/wp-content/uploads/2015/11/community_1130.png -->
+        <img src="http://stage.research2action.net/wp-content/uploads/2015/11/community.png" 
           class="category-image" width="276" height="168" />
 
         </div>
