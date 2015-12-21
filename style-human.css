@@ -341,18 +341,29 @@ p {
  * Home page hero graphic — the people icon with orbiting concepts
  *
  */
-.logged-in .section__welcome {
+.logged-in .section__welcome:before {
   background-position: center top;
 }
 
 .section__welcome {
-  background: #4e880c url(images/londrino-village-optimised_405.svg) no-repeat;
-  background-position: center -36px;
-  background-attachment: fixed;
-  background-size: 1800px 610px;
+  background-color: #4e880c;
   min-height: 580px;
   padding: 0.5rem;
-  z-index: 1;
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+}
+.section__welcome:before {
+  content: ' ';
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: url(images/village.svg) no-repeat center -36px;
+  background-size: 2574px 580px;
+  will-change: transform;
+  z-index: -1;
 }
 
 .welcome-title {
@@ -544,6 +555,33 @@ p {
  * For hero styles,  see _hero.scss.
  *
  */
+.section--frontpage:nth-child(3) {
+  padding-top: 2em;
+}
+
+.section--frontpage:last-of-type {
+  padding-bottom: 2em;
+}
+
+.section--frontpage__entry-title {
+  -webkit-flex: 1 1 100%;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
+}
+
+.section--frontpage__entry {
+  -webkit-flex: 0 0 66.66667%;
+      -ms-flex: 0 0 66.66667%;
+          flex: 0 0 66.66667%;
+}
+
+.section--frontpage__resources {
+  -webkit-flex: 1 0 33.33333%;
+      -ms-flex: 1 0 33.33333%;
+          flex: 1 0 33.33333%;
+  padding-left: 4em;
+}
+
 .inner-section {
   -webkit-align-items: baseline;
       -ms-flex-align: baseline;
@@ -556,7 +594,7 @@ p {
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
-  padding: 2em;
+  padding: 1em 2em;
   position: relative;
 }
 .inner-section:before {
@@ -571,26 +609,6 @@ p {
   bottom: 0;
   height: 100px;
   z-index: -2;
-}
-
-.section--frontpage__entry-title {
-  -webkit-flex: 1 1 100%;
-      -ms-flex: 1 1 100%;
-          flex: 1 1 100%;
-  text-transform: uppercase;
-}
-
-.section--frontpage__entry {
-  -webkit-flex: 0 0 66.66667%;
-      -ms-flex: 0 0 66.66667%;
-          flex: 0 0 66.66667%;
-}
-
-.section--frontpage__resources {
-  -webkit-flex: 1 0 33.33333%;
-      -ms-flex: 1 0 33.33333%;
-          flex: 1 0 33.33333%;
-  padding-left: 4em;
 }
 
 .fonts-loaded .resources__title {
@@ -610,37 +628,17 @@ p {
   font-size: 14px;
 }
 
-#critical-thinking > .inner-section {
-  background: #fefaf0 url(images/critical-thinking.png) no-repeat right bottom;
-  background-size: 174px 188px;
-}
-
-#social-emotional > .inner-section {
-  background: #fefaf0 url(images/social.png) no-repeat right bottom;
-  background-size: 124px 188px;
-}
-
 .more-link {
-  border: 2px solid #0089c9;
-  color: #0089c9;
-  display: inline-block;
-  font-family: 'Londrina Solid', sans-serif;
-  font-size: 20px;
-  letter-spacing: 1px;
-  margin-top: 1rem;
-  padding: .25em 1.25em;
-  transition: all .25s;
-  text-transform: uppercase;
-}
-.more-link:hover {
   background: #0089c9;
   color: white;
+  display: inline-block;
+  font-weight: 300;
+  margin-top: 1rem;
+  padding: .5em 1em;
+  transition: background .25s;
 }
-
-.category-image {
-  position: absolute;
-  bottom: -40px;
-  right: 0;
+.more-link:hover {
+  background: #2b3501;
 }
 
 .main-navigation {

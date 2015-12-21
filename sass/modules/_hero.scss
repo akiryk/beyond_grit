@@ -8,17 +8,31 @@
 
 
 .logged-in .section__welcome {
-  background-position: center top;
+  &:before {
+    background-position: center top;
+  }
 }
 
 .section__welcome {
-	background:#4e880c url(images/londrino-village-optimised_405.svg) no-repeat;
-  background-position: center -36px;
-	background-attachment:fixed;
-	background-size: 1800px 610px;
+	background-color:#4e880c;
   min-height: 580px;
   padding: 0.5rem;
-  z-index:1;
+  overflow: hidden;
+  position: relative;
+  z-index:0;
+
+  &:before {
+    content: ' ';
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: url(images/village.svg) no-repeat center -36px;
+    background-size: 2574px 580px;
+    will-change: transform;
+    z-index: -1;
+  }
 }
 
 .welcome-title {
