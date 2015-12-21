@@ -6,25 +6,8 @@
  *
  */
 
-.section--frontpage:nth-child(3) {
-	padding-top: 2em;
-}
+.section--frontpage {
 
-.section--frontpage:last-of-type {
-	padding-bottom: 2em;
-}
-
-.section--frontpage__entry-title {
-	flex: 1 1 100%;
-}
-
-.section--frontpage__entry {
-	flex: 0 0 percentage(2/3);
-}
-
-.section--frontpage__resources {
-	flex: 1 0 percentage(1/3);
-	padding-left: 4em;
 }
 
 .inner-section {
@@ -33,7 +16,7 @@
 	border: 1px solid #fff;
 	display: flex;
 	flex-wrap: wrap;
-	padding: 1em 2em;
+	padding: 2em;
 	position: relative;
 
 	&:before {
@@ -49,6 +32,20 @@
 		height: 100px;
 		z-index: -2;
 	}	
+}
+
+.section--frontpage__entry-title {
+	flex: 1 1 100%;
+	text-transform: uppercase;
+}
+
+.section--frontpage__entry {
+	flex: 0 0 percentage(2/3);
+}
+
+.section--frontpage__resources {
+	flex: 1 0 percentage(1/3);
+	padding-left: 4em;
 }
 
 .fonts-loaded .resources__title {
@@ -69,16 +66,41 @@
 	}
 }
 
+#critical-thinking > .inner-section {
+	background: $color__inner-section url(images/critical-thinking.png) no-repeat right bottom;
+	background-size: 174px 188px;
+}
+
+#community > .inner-section {
+	// background: $color__inner-section url(images/community.png) no-repeat right bottom;
+	// background-size: 320px 188px;
+}
+
+#social-emotional > .inner-section {
+	background: $color__inner-section url(images/social.png) no-repeat right bottom;
+	background-size: 124px 188px;
+}
+
 .more-link {
-	background: $color__blue-link;
-    color: white;
+	border: 2px solid #0089c9;
+    color: #0089c9;
     display: inline-block;
-    font-weight: 300;
+    font-family: 'Londrina Solid', sans-serif;
+    font-size: 20px;
+    letter-spacing: 1px;
     margin-top: 1rem;
-    padding: .5em 1em;
-    transition: background .25s;
+    padding: .25em 1.25em;
+    transition: all .25s;
+    text-transform: uppercase;
 
     &:hover {
-    	background: $color__callout-fill;
+    	background: #0089c9;
+    	color: white;
     }
+}
+
+.category-image {
+	position: absolute;
+	bottom: -40px;
+	right: 0;
 }

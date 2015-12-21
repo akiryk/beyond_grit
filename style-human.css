@@ -360,7 +360,7 @@ p {
   height: 100%;
   top: 0;
   left: 0;
-  background: url(images/village.svg) no-repeat center -36px;
+  background: url(images/village-12-20.svg) no-repeat center -36px;
   background-size: 2574px 580px;
   will-change: transform;
   z-index: -1;
@@ -555,33 +555,6 @@ p {
  * For hero styles,  see _hero.scss.
  *
  */
-.section--frontpage:nth-child(3) {
-  padding-top: 2em;
-}
-
-.section--frontpage:last-of-type {
-  padding-bottom: 2em;
-}
-
-.section--frontpage__entry-title {
-  -webkit-flex: 1 1 100%;
-      -ms-flex: 1 1 100%;
-          flex: 1 1 100%;
-}
-
-.section--frontpage__entry {
-  -webkit-flex: 0 0 66.66667%;
-      -ms-flex: 0 0 66.66667%;
-          flex: 0 0 66.66667%;
-}
-
-.section--frontpage__resources {
-  -webkit-flex: 1 0 33.33333%;
-      -ms-flex: 1 0 33.33333%;
-          flex: 1 0 33.33333%;
-  padding-left: 4em;
-}
-
 .inner-section {
   -webkit-align-items: baseline;
       -ms-flex-align: baseline;
@@ -594,7 +567,7 @@ p {
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
-  padding: 1em 2em;
+  padding: 2em;
   position: relative;
 }
 .inner-section:before {
@@ -609,6 +582,26 @@ p {
   bottom: 0;
   height: 100px;
   z-index: -2;
+}
+
+.section--frontpage__entry-title {
+  -webkit-flex: 1 1 100%;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
+  text-transform: uppercase;
+}
+
+.section--frontpage__entry {
+  -webkit-flex: 0 0 66.66667%;
+      -ms-flex: 0 0 66.66667%;
+          flex: 0 0 66.66667%;
+}
+
+.section--frontpage__resources {
+  -webkit-flex: 1 0 33.33333%;
+      -ms-flex: 1 0 33.33333%;
+          flex: 1 0 33.33333%;
+  padding-left: 4em;
 }
 
 .fonts-loaded .resources__title {
@@ -628,17 +621,37 @@ p {
   font-size: 14px;
 }
 
+#critical-thinking > .inner-section {
+  background: #fefaf0 url(images/critical-thinking.png) no-repeat right bottom;
+  background-size: 174px 188px;
+}
+
+#social-emotional > .inner-section {
+  background: #fefaf0 url(images/social.png) no-repeat right bottom;
+  background-size: 124px 188px;
+}
+
 .more-link {
-  background: #0089c9;
-  color: white;
+  border: 2px solid #0089c9;
+  color: #0089c9;
   display: inline-block;
-  font-weight: 300;
+  font-family: 'Londrina Solid', sans-serif;
+  font-size: 20px;
+  letter-spacing: 1px;
   margin-top: 1rem;
-  padding: .5em 1em;
-  transition: background .25s;
+  padding: .25em 1.25em;
+  transition: all .25s;
+  text-transform: uppercase;
 }
 .more-link:hover {
-  background: #2b3501;
+  background: #0089c9;
+  color: white;
+}
+
+.category-image {
+  position: absolute;
+  bottom: -40px;
+  right: 0;
 }
 
 .main-navigation {
