@@ -3,6 +3,7 @@
 --------------------------------------------------------------*/
 
 $desktop-content-width: 64em;
+$desktop: 68em;
 
 /*--------------------------------------------------------------
 # Fonts
@@ -23,14 +24,18 @@ $font__line-height-pre: 1.6;
 --------------------------------------------------------------*/
 
 $color__background-hero: #5c930d;
-$color__background-body: #fff;
+$color__background-body: #ece7cc;
+$color__background-inner: #fefaf0;
 $color__background-screen: #f1f1f1;
-$color__text-main: #3b2d00;
+$color__menu-home: #aac680; // light green
+$color__menu-page: #2b3501;
+$color__green: #407F00; // top green from hero background image
+$color__paleblue: #cad9DF; // blue from hero background image
+$color__text-main: #3b2d00; // dark brown
 $color__text-screen: #21759b;
 $color__callout-fill: #2b3501;
 $color__callout-stroke: #2b3501;
 $color__blue-link: #0089c9;
-$color__body: #ece7cc;
 $color__callout-text: #2b3501;
 $color__inner-section: #fefaf0;
 $color__footer-text: #878e68;

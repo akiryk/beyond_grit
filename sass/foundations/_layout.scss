@@ -6,17 +6,20 @@
  */
 
 
-.section,
-.footer {
-  padding: 1.5em calc(50% - #{$desktop-content-width/2} );
-  position: relative;
+.section{
+	position: relative;
+	margin-bottom: 2em;
 }
 
-.section--masthead {
-  padding: 0.5em 2em;
-}
 
-.content-main {
-	//background-color: #ece7cc;
-	padding: 1em 0;
+// Media Queries
+@media screen and (min-width: $desktop-content-width){
+
+	.section,
+	.site-branding,
+	.footer,
+	.content-main {
+	  @include centered-content();
+	}
+
 }

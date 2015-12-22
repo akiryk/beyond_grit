@@ -1,20 +1,36 @@
 .main-navigation {
-  clear: both;
-  display: block;
-  float: left;
-  width: 100%;
 
   ul {
+    background: $color__menu-page;
     display: none;
     list-style: none;
     margin: 0;
     padding-left: 0;
 
+    li {
+      float: left;
+      position: relative;
+
+      &:hover > a,
+      &.focus > a {
+      }
+    }
+    a {
+      display: block;
+      padding: .5em 1em;
+      text-decoration: none;
+    }
+
+    .current_page_item > a,
+    .current-menu-item > a,
+    .current_page_ancestor > a {
+    }
+
     ul {
+      border-top: 1px solid yellow;
       box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
       float: left;
       position: absolute;
-      top: 1.5em;
       left: -999em;
       z-index: 99999;
 
@@ -31,7 +47,9 @@
       }
 
       a {
-        width: 200px;
+        border-bottom: 1px solid yellow;
+        padding: 0.5em;
+        width: 340px;
       }
 
       :hover > a,
@@ -45,26 +63,10 @@
 
     li:hover > ul,
     li.focus > ul {
-      left: auto;
+      left: 1em;
     }
   }
-  li {
-    float: left;
-    position: relative;
 
-    &:hover > a,
-    &.focus > a {
-    }
-  }
-  a {
-    display: block;
-    text-decoration: none;
-  }
-
-  .current_page_item > a,
-  .current-menu-item > a,
-  .current_page_ancestor > a {
-  }
 }
 
 /* Small menu. */

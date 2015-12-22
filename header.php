@@ -26,11 +26,11 @@
 
   <?php if ( !is_front_page() ) { ?>
     <header id="masthead" class="site-header section--masthead" role="banner">
-    <div class="site-branding">
-      <p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'title' ); ?></a></p>
-      <p class="site-description"><?php bloginfo( 'description' ); ?></p>
-    </div><!-- .site-branding -->
-
+      <div class="site-branding">
+        <div class="logo-wrapper"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="logo" rel="home"></a></div>
+        <p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'title' ); ?></a></p>
+      </div><!-- .site-branding -->
+    </header>
     <nav id="site-navigation" class="main-navigation" role="navigation">
       <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'beyond_grit' ); ?></button>
       <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>

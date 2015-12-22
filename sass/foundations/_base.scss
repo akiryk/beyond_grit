@@ -16,7 +16,7 @@ html {
 }
 
 body {
-  background: #ece7cc;
+  background: $color__background-inner;
 }
 
 body,
@@ -48,6 +48,7 @@ h6 {
   color: inherit;
   clear: both;
   font-family: $font__headings;
+  margin-top: 0;
 }
 
 .fonts-loaded h1,
@@ -57,6 +58,7 @@ h6 {
 .fonts-loaded h5,
 .fonts-loaded h6 {
   font-family: $font__headings--webfont;
+  text-transform: uppercase;
 }
 
 a {
@@ -66,4 +68,16 @@ a {
 
 p {
   color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media screen and (min-width: $desktop){
+  body {
+    background: $color__background-body;
+  }
+  
 }

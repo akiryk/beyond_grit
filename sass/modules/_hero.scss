@@ -5,16 +5,9 @@
  *
  */
 
-
-
-.logged-in .section__welcome {
-  &:before {
-    background-position: center top;
-  }
-}
-
 .section__welcome {
 	background-color:#4e880c;
+  margin-bottom: 0;
   min-height: 580px;
   padding: 0.5rem;
   overflow: hidden;
@@ -28,7 +21,7 @@
     height: 100%;
     top: 0;
     left: 0;
-    background: url(images/village-12-20.svg) no-repeat center -36px;
+    background: url(images/village-12-20.svg) no-repeat center top;
     background-size: 2574px 580px;
     will-change: transform;
     z-index: -1;
@@ -37,7 +30,7 @@
 
 .welcome-title {
 	color: #2b3501;
-	font-size: 4em;
+	font-size: 2.25em;
   letter-spacing: 1px;
 	line-height: 1;
 	margin: 0 auto 0.5rem auto;
@@ -49,7 +42,7 @@
 }
 
 .fonts-loaded .welcome-title {
-  font-size: 3.5em;
+  font-size: 2.25em;
   font-weight: 400;
   margin: 0 auto 0.5rem auto;
   text-transform: uppercase;
@@ -207,4 +200,12 @@
   font-weight: 700;
   background: #FFC85B;
   text-align: center;
+}
+
+@media screen and (min-width: 63.125em){
+
+  .fonts-loaded .welcome-title {
+    font-size: 3.5em;
+  }
+
 }
