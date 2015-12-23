@@ -17,7 +17,6 @@ get_header(); ?>
       <div class="hero-wrapper">
         <ul class="hero">
           <li class="hero__primary">
-            <a class="" href="#"><div class="hero__message">Some infor for you.</div></a>
           </li>
           <li class="hero__callout hero__callout--left"><a class="callout-text" href="#critical-thinking">Critical Thinking and Analysis</a></li>
           <li class="hero__callout hero__callout--center"><a class="callout-text"  href="#community">Community Leadership and Action</a></li>

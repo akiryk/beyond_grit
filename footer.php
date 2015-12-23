@@ -45,10 +45,11 @@ u();setTimeout(a,50)}}var D=Date.now();w(l,"sans-serif",k);w(m,"serif",k);w(n,"m
       return;
     }
     var fontA = new w.FontFaceObserver( "Open Sans" );
-    var fontB = new w.FontFaceObserver( "Londrina Solid" );
+    var fontB = new w.FontFaceObserver( "Open Sans Condensed" );
+    var fontC = new w.FontFaceObserver( "Londrina Solid" );
     
     w.Promise
-      .all([fontA.check(), fontB.check()])
+      .all([fontA.check(), fontB.check(), fontC.check()])
       .then(function(){
         w.document.body.className += " fonts-loaded";
         setCookie("fonts-loaded", "true");

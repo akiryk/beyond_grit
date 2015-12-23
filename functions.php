@@ -124,10 +124,9 @@ add_action( 'after_setup_theme', 'beyond_grit_content_width', 0 );
  */
 function beyond_grit_scripts() {
 
-  if ( is_front_page() ){
-
-    wp_enqueue_script( 'theme-scripts', get_template_directory_uri() . '/js/beyond-grit-scripts.js', array('jquery'), '20151021' );
-  }
+  //if ( is_front_page() ){
+  wp_enqueue_script( 'theme-scripts', get_template_directory_uri() . '/js/beyond-grit-scripts.js', array('jquery'), '20151021' );
+  //}
 
   wp_enqueue_style( 'beyond_grit-style', get_stylesheet_uri() );
 

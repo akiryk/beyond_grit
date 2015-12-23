@@ -31,7 +31,8 @@ $color__menu-home: #aac680; // light green
 $color__menu-page: #2b3501;
 $color__green: #407F00; // top green from hero background image
 $color__paleblue: #cad9DF; // blue from hero background image
-$color__text-main: #3b2d00; // dark brown
+$color__brown: #3b2d00;
+$color__text-main: $color__brown; // dark brown
 $color__text-screen: #21759b;
 $color__callout-fill: #2b3501;
 $color__callout-stroke: #2b3501;

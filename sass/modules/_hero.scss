@@ -6,35 +6,19 @@
  */
 
 .section__welcome {
-	background-color:#4e880c;
+  background-image: linear-gradient(183deg, $color__paleblue 35%, #407f00 0%);
   margin-bottom: 0;
-  min-height: 580px;
   padding: 0.5rem;
   overflow: hidden;
-  position: relative;
-  z-index:0;
-
-  &:before {
-    content: ' ';
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: url(images/village-12-20.svg) no-repeat center top;
-    background-size: 2574px 580px;
-    will-change: transform;
-    z-index: -1;
-  }
 }
 
 .welcome-title {
-	color: #2b3501;
-	font-size: 2.25em;
+  color: #2b3501;
+  font-size: 1.75em;
   letter-spacing: 1px;
-	line-height: 1;
-	margin: 0 auto 0.5rem auto;
-	text-align: center;
+  line-height: 1;
+  margin: 0 auto 0.5rem auto;
+  text-align: center;
    // if fonts aren't loaded..
   font-size: 40px;
   font-family: sans-serif;
@@ -42,7 +26,7 @@
 }
 
 .fonts-loaded .welcome-title {
-  font-size: 2.25em;
+  font-size: 1.75em;
   font-weight: 400;
   margin: 0 auto 0.5rem auto;
   text-transform: uppercase;
@@ -51,155 +35,231 @@
 .welcome-subtitle {
   color: #3b2d00;
   display: block;
-  font-size: 18px;
   font-weight: 500;
   text-align: center;
 }
 
-.hero-wrapper {
-	padding: 0 calc(50% - 280px);
-}
-
 .hero {
-  height: 400px;
   font-family: $font__headings--alt;
   list-style: none;
-  position: relative;
   text-align: center;
+  padding: 0;
 }
 
 .hero__primary {
   background: transparent url(images/londrino-figures-optimized.svg) no-repeat center center;
-  height: 252px;
-  width: 247px;
-  position: absolute;
-  margin: 0 auto;
-  top: 0; 
-  left: 0; 
-  bottom: 0; 
-  right: 0;
-}
-
-.hero__message {
-  background: white;
-  border-radius: 100%;
-  width: 100%;
-  height: 100%;
-  position:absolute;
-  left:0;
-  transform: scale(0);
-  transition: transform .3s ease .1s;
-}
-
-.callout-text {
-	font-family: inherit;
-  font-size: 18px;
-  font-weight: 400;
-  letter-spacing: 0.25px;
-  line-height: 1.3;
-  margin: auto;
-  padding:0.33em;
-  transform: translateY(-0.25rem);
-  // text-transform: uppercase;
+  height: 12em;
+  margin: 0 auto 1em;
 }
 
 .hero__callout {
-  background: #e3d9b2;
-  border-radius: 100px;
-  border: 6px solid $color__callout-stroke;
-  color: $color__callout-text;
-  height: 150px;
-  width: 150px;
-  position: absolute;
-  cursor: pointer;
-  display: flex;
-  transition: all .3s cubic-bezier(0,1.6,1,0.25);
-  top: 176px;
+  background: hsla(0,100%,100%,0.3);
+  border-radius: 6px;
+  margin-bottom: 0.5em;
 }
 
-.hero__callout:before {
-  border-width: 0 60px 88px 60px;
-  border-style: solid;
-  border-color: transparent transparent $color__callout-fill transparent;
-  transition: border-width .2s ease;
-  content: '';
-  position: absolute;
+.callout-text {
   display: block;
-	height: 0;
-  box-sizing: border-box;
-  width: 130px;
-  z-index:-1;
+  font-size: 19px;
+  line-height: 1.2;
+  padding: 0.5em;
 }
 
-.hero__callout--primary {
-  border-radius: 50%;
-  border: 12px solid $color__callout-stroke;
-  height: 300px;
-  width: 300px;
-  margin: 0 auto;
-  top: 0; 
-  left: 0; 
-  bottom: 0; 
-  right: 0;
-  overflow: hidden;
-}
 
-.hero__message {
-  background: white;
-  border-radius: 100%;
-  width: 100%;
-  height: 100%;
-  position:absolute;
-  left:0;
-  transform: scale(0);
-  transition: transform .3s ease .1s;
-}
+// Media Queries
 
-.hero__callout span {
-  margin: auto;
-}
+@media screen and (min-width: 35em){
+  
+  .section__welcome {
+    background-color:#4e880c;
+    min-height: 580px;
+    overflow: hidden;
+    position: relative;
+    z-index:0;
 
-.hero__callout--left { 
-  left: 6px;
-}
+    &:before {
+      content: ' ';
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: url(images/village-12-20.svg) no-repeat center top;
+      background-size: 2574px 580px;
+      will-change: transform;
+      z-index: -1;
+    }
+  }
 
-.hero__callout--right {
-  right: 0px;  
-}
+  .welcome-title {
+    font-size: 2.25em;
+    margin: 18px auto;
+  }
 
-.hero__callout--center {  
-  top: 294px;
-  left:0;
-  right: 0;
-  margin: auto;
-}
+  .fonts-loaded .welcome-title {
+    font-size: 2.25em;
+    margin: 0 auto 0.5rem auto;
+  }
 
-.hero__callout--left:before{
-  transform: translate(72px,-20px) rotate(56deg);
-}
+  .welcome-subtitle {
+    font-size: 18px;
+  }
 
-.hero__callout--center:before{
-  transform: translate(4px,-57px);
-}
+  .hero-wrapper {
+    padding: 0 calc(50% - 280px);
+  }
 
-.hero__callout--right:before{
-  transform: translate(-63px,-20px) rotate(-56deg);
-}
+  .hero {
+    height: 400px;
+    position: relative;
+  }
 
-.btn {
-  position: absolute;
-  bottom: 2rem;
-  left: 0;
-  right: 0;
-  margin: auto;
-  padding:.5em 1.5em;
-  border-radius: 5px;
-  width: 300px;
-  font-size: 18px;
-  color: hsla(0,0%,0%,0.75);
-  font-weight: 700;
-  background: #FFC85B;
-  text-align: center;
+  .hero__primary {
+    background: transparent url(images/londrino-figures-optimized.svg) no-repeat center center;
+    height: 15.75em;
+    position: absolute;
+    margin: 0 auto;
+    top: 0; 
+    left: 0; 
+    bottom: 0; 
+    right: 0;
+  }
+
+  .hero__message {
+    background: white;
+    border-radius: 100%;
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    left:0;
+    transform: scale(0);
+    // transition: transform .3s ease .1s;
+  }
+
+  .callout-text {
+    font-family: inherit;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0.25px;
+    line-height: 1.3;
+    margin: auto;
+    padding:0.33em;
+    transform: translateY(-0.25rem);
+  }
+
+  .hero__callout {
+    background: #e3d9b2;
+    border-radius: 100px;
+    border: 6px solid $color__callout-stroke;
+    color: $color__callout-text;
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    cursor: pointer;
+    display: flex;
+    box-shadow: 0 0 0 0;
+    transition: box-shadow .2s;
+    top: 176px;
+  }
+
+  .hero__callout:before {
+    border-width: 0 60px 88px 60px;
+    border-style: solid;
+    border-color: transparent transparent $color__callout-fill transparent;
+    transition: border-width .2s ease;
+    content: '';
+    position: absolute;
+    display: block;
+    height: 0;
+    box-sizing: border-box;
+    width: 130px;
+    z-index:-1;
+  }
+
+  .hero__callout--primary {
+    border-radius: 50%;
+    border: 12px solid $color__callout-stroke;
+    height: 300px;
+    width: 300px;
+    margin: 0 auto;
+    top: 0; 
+    left: 0; 
+    bottom: 0; 
+    right: 0;
+    overflow: hidden;
+  }
+
+  .hero__message {
+    background: white;
+    border-radius: 100%;
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    left:0;
+    transition: all .3s ease .1s;
+  }
+
+  .hero__callout:hover {
+    // animation: shadow-animation .2s;
+    // animation-fill-mode: forwards;
+    border-color: #E6650D;
+  }
+
+  @keyframes shadow-animation {
+    0% {
+      box-shadow: 0 0 0 0;
+    }
+    80%{
+      box-shadow: 0 0 0 10px;
+    }
+    100%{
+      box-shadow: 0 0 0 6px;
+    }
+  }
+
+  .hero__callout--left { 
+    left: 6px;
+  }
+
+  .hero__callout--right {
+    right: 0px;  
+  }
+
+  .hero__callout--center {  
+    top: 294px;
+    left:0;
+    right: 0;
+    margin: auto;
+  }
+
+  .hero__callout--left:before{
+    transform: translate(72px,-20px) rotate(56deg);
+  }
+
+  .hero__callout--center:before{
+    transform: translate(4px,-57px);
+  }
+
+  .hero__callout--right:before{
+    transform: translate(-63px,-20px) rotate(-56deg);
+  }
+
+  .btn {
+    position: absolute;
+    bottom: 2rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding:.5em 1.5em;
+    border-radius: 5px;
+    width: 300px;
+    font-size: 18px;
+    color: hsla(0,0%,0%,0.75);
+    font-weight: 700;
+    background: #FFC85B;
+    text-align: center;
+  }
+
 }
 
 @media screen and (min-width: 63.125em){

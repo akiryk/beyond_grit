@@ -1,4 +1,16 @@
+#primary-menu > li:first-of-type {
+  border: none;
+
+
+  & > a {
+    display: none; // hide 'Research Areas' link
+  }
+
+}
+
 .main-navigation {
+
+  background: $color__green;
 
   ul {
     background: $color__menu-page;
@@ -8,31 +20,20 @@
     padding-left: 0;
 
     li {
-      float: left;
+      border-bottom: 1px solid hsla(0,100%,100%,0.25);
       position: relative;
 
-      &:hover > a,
-      &.focus > a {
-      }
     }
+
     a {
       display: block;
       padding: .5em 1em;
       text-decoration: none;
     }
 
-    .current_page_item > a,
-    .current-menu-item > a,
-    .current_page_ancestor > a {
-    }
-
     ul {
-      border-top: 1px solid yellow;
-      box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-      float: left;
-      position: absolute;
-      left: -999em;
-      z-index: 99999;
+
+      display: block;
 
       ul {
         left: -999em;
@@ -47,40 +48,108 @@
       }
 
       a {
-        border-bottom: 1px solid yellow;
-        padding: 0.5em;
-        width: 340px;
+        padding: 0.5em 1em;
       }
 
-      :hover > a,
-      .focus > a {
-      }
-
-      a:hover,
-      a.focus {
-      }
     }
 
-    li:hover > ul,
-    li.focus > ul {
-      left: 1em;
-    }
   }
 
 }
 
 /* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
-  display: block;
+
+.menu-toggle {
+  background: transparent;
+  color: white;
+  text-align: right;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid hsla(0,100%,100%,0.25);
+  padding: 0.5em 1em;
 }
 
-@media screen and (min-width: 37.5em) {
+@media screen and (min-width: 45em) {
+
+  #primary-menu > li:first-of-type {
+    border: none;
+    border-bottom: 1px solid green;
+
+    & > a {
+      display: block; // hide 'Research Areas' link
+    }
+
+  }
+
   .menu-toggle {
     display: none;
   }
-  .main-navigation ul {
-    display: block;
+
+  .main-navigation {
+
+    ul {
+
+      display: block;
+
+      li {
+        background: darken($color__green, 5%);
+        border: none;
+        color: #a3bf87;
+        float: left;
+        margin-right: 0.25em;
+      }
+
+      li.current-menu-item {
+        background: $color__background-body;
+        border-bottom: 1px solid $color__background-body;
+        color: darken($color__green, 5);
+      }
+
+      li:hover {
+        background: darken($color__green, 15%);
+        color: #cfdec0;
+      }
+
+      li:hover > ul,
+        li.focus > ul {
+          //left: 1em;
+          opacity: 1.0;
+          visibility: visible;
+        }
+
+      ul {
+        background: $color__green;
+        box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+        float: left;
+        position: absolute;
+        opacity: 0.0;
+        // left: -999em;
+        transition: all .2s;
+        visibility: hidden;
+        z-index: 99999;
+
+        a {
+          padding: 0.5em 1em;
+          width: 340px;
+        }
+
+        li {
+          background: darken($color__green, 15%);
+          margin-right: 0;
+        }
+
+        li.current-menu-item  {
+          background: darken($color__green, 40%);
+          color: #cfdec0;
+          font-weight: 700;
+        }
+
+        ul {
+          left: -999em;
+          top: 0;
+        }
+      }
+    }
   }
 }
 
