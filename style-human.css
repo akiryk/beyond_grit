@@ -501,8 +501,7 @@ img {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    box-shadow: 0 0 0 0;
-    transition: box-shadow .2s;
+    transition: box-shadow .15s ease-in;
     top: 176px;
   }
 
@@ -540,53 +539,109 @@ img {
     height: 100%;
     position: absolute;
     left: 0;
-    -webkit-transform: scale(0);
-            transform: scale(0);
     transition: all .3s ease .1s;
   }
 
-  .hero__callout:hover {
-    border-color: #E6650D;
-  }
-
-  @-webkit-keyframes shadow-animation {
-    0% {
-      box-shadow: 0 0 0 0;
-    }
-    80% {
-      box-shadow: 0 0 0 10px;
-    }
-    100% {
-      box-shadow: 0 0 0 6px;
-    }
-  }
-
-  @keyframes shadow-animation {
-    0% {
-      box-shadow: 0 0 0 0;
-    }
-    80% {
-      box-shadow: 0 0 0 10px;
-    }
-    100% {
-      box-shadow: 0 0 0 6px;
-    }
-  }
   .hero__callout--left {
+    box-shadow: inset 0 0 0 0 #F19100;
     left: 6px;
+  }
+  .hero__callout--left:hover {
+    -webkit-animation: fadeInnerShadowOrange;
+            animation: fadeInnerShadowOrange;
+    -webkit-animation-duration: 5s;
+            animation-duration: 5s;
+    -webkit-animation-delay: .5s;
+            animation-delay: .5s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    box-shadow: inset 0 0 0px 72px #F19100;
   }
 
   .hero__callout--right {
+    box-shadow: inset 0 0 0 0 #0089c9;
     right: 0px;
+  }
+  .hero__callout--right:hover {
+    -webkit-animation: fadeInnerShadowBlue;
+            animation: fadeInnerShadowBlue;
+    -webkit-animation-duration: 5s;
+            animation-duration: 5s;
+    -webkit-animation-delay: .5s;
+            animation-delay: .5s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    box-shadow: inset 0 0 0px 72px #0089c9;
   }
 
   .hero__callout--center {
+    box-shadow: inset 0 0 0 0 #e6650d;
     top: 294px;
     left: 0;
     right: 0;
     margin: auto;
   }
+  .hero__callout--center:hover {
+    -webkit-animation: fadeInnerShadowYellow;
+            animation: fadeInnerShadowYellow;
+    -webkit-animation-duration: 5s;
+            animation-duration: 5s;
+    -webkit-animation-delay: .5s;
+            animation-delay: .5s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    box-shadow: inset 0 0 0px 72px #e6650d;
+  }
 
+  @-webkit-keyframes fadeInnerShadowYellow {
+    from {
+      box-shadow: inset 0 0 0 72px #e6650d;
+    }
+    to {
+      box-shadow: inset 0 0 0 72px #f9bc93;
+    }
+  }
+
+  @keyframes fadeInnerShadowYellow {
+    from {
+      box-shadow: inset 0 0 0 72px #e6650d;
+    }
+    to {
+      box-shadow: inset 0 0 0 72px #f9bc93;
+    }
+  }
+  @-webkit-keyframes fadeInnerShadowOrange {
+    from {
+      box-shadow: inset 0 0 0 72px #F19100;
+    }
+    to {
+      box-shadow: inset 0 0 0 72px #ffd18b;
+    }
+  }
+  @keyframes fadeInnerShadowOrange {
+    from {
+      box-shadow: inset 0 0 0 72px #F19100;
+    }
+    to {
+      box-shadow: inset 0 0 0 72px #ffd18b;
+    }
+  }
+  @-webkit-keyframes fadeInnerShadowBlue {
+    from {
+      box-shadow: inset 0 0 0 72px #0089c9;
+    }
+    to {
+      box-shadow: inset 0 0 0 72px #63cdff;
+    }
+  }
+  @keyframes fadeInnerShadowBlue {
+    from {
+      box-shadow: inset 0 0 0 72px #0089c9;
+    }
+    to {
+      box-shadow: inset 0 0 0 72px #63cdff;
+    }
+  }
   .hero__callout--left:before {
     -webkit-transform: translate(72px, -20px) rotate(56deg);
             transform: translate(72px, -20px) rotate(56deg);

@@ -157,6 +157,16 @@ function beyond_grit_getcookie() {
 }
 add_action( 'wp_head', 'beyond_grit_getcookie' );
 
+/**
+ * Prevent Page Scroll When Clicking the More Link
+ * From wp codex: users can prevent the scroll by filtering the content more link with 
+ * a simple regular expression.
+ */
+function remove_more_link_scroll( $link ) {
+  $link = preg_replace( '|#more-[0-9]+|', '', $link );
+  return $link;
+}
+add_filter( 'the_content_more_link', 'remove_more_link_scroll' );
 
 /**
  * Implement the Custom Header feature.
