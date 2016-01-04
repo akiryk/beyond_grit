@@ -11,27 +11,27 @@ get_header(); ?>
 
   <div id="primary" class="content-area">
 
-    <header id="welcome" class="section section__welcome">
+    <header id="welcome" class="section section__welcome" role="banner">
       <h1 class="welcome-title">Powerful Youth, Powerful Communities</h1>
       <a href="#" class="welcome-subtitle">A Resource For Learning About Youth Organizing</a>
-      <div class="hero-wrapper">
+      <nav class="hero-wrapper" role="navigation">
         <ul class="hero">
           <li class="hero__primary">
           </li>
-          <li class="hero__callout hero__callout--left"><a class="callout-text" href="#critical-thinking">Critical Thinking and Analysis</a></li>
-          <li class="hero__callout hero__callout--center"><a class="callout-text"  href="#community">Community Leadership and Action</a></li>
-          <li class="hero__callout hero__callout--right"><a class="callout-text" class="" href="#social-emotional">Social and Emotional Development</a></li>
+          <li><a class="hero__callout hero__callout--left" href="#critical-thinking"><span class="callout-text">Critical Thinking and Analysis</span></a></li>
+          <li><a class="hero__callout hero__callout--center" href="#community"><span class="callout-text">Community Leadership and Action</span></a></li>
+          <li><a class="hero__callout hero__callout--right" href="#social-emotional"><span class="callout-text">Social and Emotional Development</span></a></li>
         </ul>  
-      </div>
+      </nav>
     </header>
 
     <section class="section section--home-navigation">
-      <nav>
+      <nav role="navigation">
         <?php wp_nav_menu( array ( 'menu' => 'Front Page Menu', 'menu_class' => 'menu menu--home',) ); ?>
       </nav>  
     </section>
     
-    <main id="main" class="content-main" role="main">
+    <main id="main" class="content-main content-main--frontpage" role="main">
 
       <section id="critical-thinking" class="section section--frontpage">
         <div class="inner-section">

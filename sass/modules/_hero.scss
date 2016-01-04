@@ -69,6 +69,11 @@
 // Media Queries
 
 @media screen and (min-width: 35em){
+
+  .hero-wrapper {
+    position: relative;
+    z-index: 9;
+  }
   
   .section__welcome {
     background-color:#4e880c;
@@ -115,14 +120,13 @@
   }
 
   .hero__primary {
-    background: transparent url(images/londrino-figures-optimized.svg) no-repeat center center;
-    height: 15.75em;
+    background: transparent url(images/figures-right-sized.svg) no-repeat center center;
+    height: 252px;
     position: absolute;
-    margin: 0 auto;
-    top: 0; 
+    margin: auto;
     left: 0; 
-    bottom: 0; 
     right: 0;
+    width: 246px;
   }
 
   .hero__message {
@@ -163,6 +167,13 @@
     display: flex;
     transition: box-shadow .15s ease-in;
     top: 176px;
+
+    &:hover {
+      animation-duration: 2s;
+      animation-delay: .2s;
+      animation-fill-mode: forwards;
+      animation-timing-function: ease-out;
+    }
   }
 
   .hero__callout:before {
@@ -207,10 +218,8 @@
     left: 6px;
 
     &:hover {
-      animation: fadeInnerShadowOrange;
-      animation-duration: 5s;
-      animation-delay: .5s;
-      animation-fill-mode: forwards;
+      animation-name: fadeInnerShadowOrange;
+      
       box-shadow: inset 0 0 0px 72px $orange;
     }
   }
@@ -219,10 +228,7 @@
     box-shadow: inset 0 0 0 0 #0089c9;
     right: 0px;  
     &:hover {
-      animation: fadeInnerShadowBlue;
-      animation-duration: 5s;
-      animation-delay: .5s;
-      animation-fill-mode: forwards;
+      animation-name: fadeInnerShadowBlue;
       box-shadow: inset 0 0 0px 72px $blue;
     }
   }
@@ -234,10 +240,7 @@
     right: 0;
     margin: auto;
     &:hover {
-      animation: fadeInnerShadowYellow;
-      animation-duration: 5s;
-      animation-delay: .5s;
-      animation-fill-mode: forwards;
+      animation-name: fadeInnerShadowYellow;
       box-shadow: inset 0 0 0px 72px $yellow;
     }
   }

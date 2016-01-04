@@ -318,6 +318,7 @@ p {
 }
 
 img {
+  display: block;
   max-width: 100%;
   height: auto;
 }
@@ -342,8 +343,8 @@ img {
   .section,
   .site-branding,
   .footer,
-  .content-main {
-    padding: 0 calc(50% - 32em );
+  .type-page {
+    padding: 1 calc(50% - 32em );
   }
 }
 /*
@@ -412,6 +413,11 @@ img {
 }
 
 @media screen and (min-width: 35em) {
+  .hero-wrapper {
+    position: relative;
+    z-index: 9;
+  }
+
   .section__welcome {
     background-color: #4e880c;
     min-height: 580px;
@@ -456,14 +462,13 @@ img {
   }
 
   .hero__primary {
-    background: transparent url(images/londrino-figures-optimized.svg) no-repeat center center;
-    height: 15.75em;
+    background: transparent url(images/figures-right-sized.svg) no-repeat center center;
+    height: 252px;
     position: absolute;
-    margin: 0 auto;
-    top: 0;
+    margin: auto;
     left: 0;
-    bottom: 0;
     right: 0;
+    width: 246px;
   }
 
   .hero__message {
@@ -503,6 +508,16 @@ img {
     display: flex;
     transition: box-shadow .15s ease-in;
     top: 176px;
+  }
+  .hero__callout:hover {
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-delay: .2s;
+            animation-delay: .2s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
   }
 
   .hero__callout:before {
@@ -547,14 +562,8 @@ img {
     left: 6px;
   }
   .hero__callout--left:hover {
-    -webkit-animation: fadeInnerShadowOrange;
-            animation: fadeInnerShadowOrange;
-    -webkit-animation-duration: 5s;
-            animation-duration: 5s;
-    -webkit-animation-delay: .5s;
-            animation-delay: .5s;
-    -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
+    -webkit-animation-name: fadeInnerShadowOrange;
+            animation-name: fadeInnerShadowOrange;
     box-shadow: inset 0 0 0px 72px #F19100;
   }
 
@@ -563,14 +572,8 @@ img {
     right: 0px;
   }
   .hero__callout--right:hover {
-    -webkit-animation: fadeInnerShadowBlue;
-            animation: fadeInnerShadowBlue;
-    -webkit-animation-duration: 5s;
-            animation-duration: 5s;
-    -webkit-animation-delay: .5s;
-            animation-delay: .5s;
-    -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
+    -webkit-animation-name: fadeInnerShadowBlue;
+            animation-name: fadeInnerShadowBlue;
     box-shadow: inset 0 0 0px 72px #0089c9;
   }
 
@@ -582,14 +585,8 @@ img {
     margin: auto;
   }
   .hero__callout--center:hover {
-    -webkit-animation: fadeInnerShadowYellow;
-            animation: fadeInnerShadowYellow;
-    -webkit-animation-duration: 5s;
-            animation-duration: 5s;
-    -webkit-animation-delay: .5s;
-            animation-delay: .5s;
-    -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
+    -webkit-animation-name: fadeInnerShadowYellow;
+            animation-name: fadeInnerShadowYellow;
     box-shadow: inset 0 0 0px 72px #e6650d;
   }
 
@@ -763,6 +760,21 @@ img {
   }
 }
 @media screen and (min-width: 68em) {
+  .section--frontpage {
+    position: relative;
+    z-index: 1;
+  }
+
+  .section--frontpage:last-of-type {
+    margin-bottom: 0;
+  }
+
+  .content-main--frontpage {
+    background-color: #ece7cc;
+    padding: 2em 0;
+    position: relative;
+  }
+
   .menu--home > li {
     -webkit-flex: 0 1 auto;
         -ms-flex: 0 1 auto;
@@ -1031,7 +1043,7 @@ img {
     -webkit-align-items: baseline;
         -ms-flex-align: baseline;
             align-items: baseline;
-    padding: 0 calc(50% - 32em );
+    padding: 1 calc(50% - 32em );
   }
 
   .section--masthead {
@@ -1124,7 +1136,7 @@ img {
 }
 .section--home-navigation {
   background: #2b3501;
-  margin-bottom: 2em;
+  margin-bottom: 0;
   padding: 0;
 }
 
@@ -1257,6 +1269,10 @@ img {
   float: left;
   margin: 1em 1.5em 1em 0;
   width: 33.3333%;
+}
+
+.page__theme-image--left {
+  margin-bottom: 1em;
 }
 
 @media screen and (min-width: 700px) {

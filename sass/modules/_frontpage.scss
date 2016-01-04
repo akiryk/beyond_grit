@@ -55,7 +55,7 @@
 // Media Queries
 
 @media screen and (min-width: 35em){
-  	
+
  	.inner-section {
  		align-items: baseline;
 		display: flex;
@@ -80,6 +80,21 @@
 
 
 @media screen and (min-width: $desktop){
+	
+	.section--frontpage {
+		position: relative;
+		z-index: 1;
+	}
+
+	.section--frontpage:last-of-type {
+		margin-bottom: 0;
+ 	}
+
+	.content-main--frontpage {
+		background-color: #ece7cc;
+		padding: 2em 0;
+		position: relative;
+	}
 
   .menu--home > li {
 		flex: 0 1 auto;
