@@ -18,9 +18,9 @@ get_header(); ?>
         <ul class="hero">
           <li class="hero__primary">
           </li>
-          <li><a class="hero__callout hero__callout--left" href="#critical-thinking"><span class="callout-text">Critical Thinking and Analysis</span></a></li>
-          <li><a class="hero__callout hero__callout--center" href="#community"><span class="callout-text">Community Leadership and Action</span></a></li>
-          <li><a class="hero__callout hero__callout--right" href="#social-emotional"><span class="callout-text">Social and Emotional Development</span></a></li>
+          <li class="hero__callout hero__callout--left"><a href="#critical-thinking"><span class="callout-text">Critical Thinking and Analysis</span></a></li>
+          <li class="hero__callout hero__callout--center"><a href="#community"><span class="callout-text">Community Leadership and Action</span></a></li>
+          <li class="hero__callout hero__callout--right"><a href="#social-emotional"><span class="callout-text">Social and Emotional Development</span></a></li>
         </ul>  
       </nav>
     </header>

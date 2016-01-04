@@ -6,6 +6,10 @@
  *
  */
 
+.content-main--frontpage {
+	padding: 1em 0;
+}
+
 .inner-section {
 	padding: 0 1em;
 }	
@@ -13,7 +17,6 @@
 .section--frontpage__entry-title {
 	text-transform: uppercase;
 }
-
 
 .fonts-loaded .resources__title {
 	font-family: 'Open Sans', sans-serif;
@@ -92,7 +95,6 @@
 
 	.content-main--frontpage {
 		background-color: #ece7cc;
-		padding: 2em 0;
 		position: relative;
 	}
 

@@ -344,7 +344,7 @@ img {
   .site-branding,
   .footer,
   .type-page {
-    padding: 1 calc(50% - 32em );
+    padding: 0 calc(50% - 32em );
   }
 }
 /*
@@ -519,6 +519,11 @@ img {
     -webkit-animation-timing-function: ease-out;
             animation-timing-function: ease-out;
   }
+  .hero__callout a {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
 
   .hero__callout:before {
     border-width: 0 60px 88px 60px;
@@ -682,6 +687,10 @@ img {
  * For hero styles,  see _hero.scss.
  *
  */
+.content-main--frontpage {
+  padding: 1em 0;
+}
+
 .inner-section {
   padding: 0 1em;
 }
@@ -771,7 +780,6 @@ img {
 
   .content-main--frontpage {
     background-color: #ece7cc;
-    padding: 2em 0;
     position: relative;
   }
 
@@ -1043,7 +1051,7 @@ img {
     -webkit-align-items: baseline;
         -ms-flex-align: baseline;
             align-items: baseline;
-    padding: 1 calc(50% - 32em );
+    padding: 0 calc(50% - 32em );
   }
 
   .section--masthead {
