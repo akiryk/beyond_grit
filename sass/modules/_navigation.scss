@@ -100,8 +100,6 @@
       }
 
       li.current-menu-item {
-        background: $color__background-body;
-        border-bottom: 1px solid $color__background-body;
         color: darken($color__green, 5);
       }
 
@@ -139,7 +137,6 @@
         }
 
         li.current-menu-item  {
-          background: darken($color__green, 40%);
           color: #cfdec0;
           font-weight: 700;
         }

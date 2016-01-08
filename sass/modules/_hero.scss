@@ -47,7 +47,8 @@
 }
 
 .hero__primary {
-  background: transparent url(images/londrino-figures-optimized.svg) no-repeat center center;
+  // background: transparent url(images/londrino-figures-optimized.svg) no-repeat center center;
+  background: transparent url(images/figures-right-sized.svg) no-repeat center center;
   height: 12em;
   margin: 0 auto 1em;
 }
@@ -120,7 +121,6 @@
   }
 
   .hero__primary {
-    background: transparent url(images/figures-right-sized.svg) no-repeat center center;
     height: 252px;
     position: absolute;
     margin: auto;
@@ -165,6 +165,7 @@
     position: absolute;
     cursor: pointer;
     display: flex;
+    align-items: center;
     transition: box-shadow .15s ease-in;
     top: 176px;
 
@@ -177,6 +178,7 @@
 
     a {
       display: flex;
+      align-items: center;
     }
   }
 
@@ -187,6 +189,7 @@
     transition: border-width .2s ease;
     content: '';
     position: absolute;
+    top: 0;
     display: block;
     height: 0;
     box-sizing: border-box;
