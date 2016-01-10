@@ -30,7 +30,7 @@
     <header id="welcome" class="section section__welcome" role="banner">
 
       <h1 class="welcome-title">Powerful Youth, Powerful Communities</h1>
-      <a href="#" class="welcome-subtitle">A Resource For Learning About Youth Organizing</a>
+      <div class="welcome-subtitle">A Resource For Learning About Youth Organizing</div>
 
       <nav class="hero-wrapper" role="navigation">
         <ul class="hero">

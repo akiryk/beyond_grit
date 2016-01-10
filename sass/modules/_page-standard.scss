@@ -15,6 +15,14 @@
 	line-height: 1;
 }
 
+.entry-content a {
+	color: $color__blue-link;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
 @media screen and (min-width: $tablet){
 
 	.inner-content {
