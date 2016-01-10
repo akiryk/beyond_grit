@@ -1,0 +1,32 @@
+/* 
+ * Styles for pages with the Research Area template
+ *
+ * See page-templates/research-area.php and 
+ * template-parts/content-research-area.php
+ * 
+ */
+
+ @media screen and (min-width: $tablet){
+
+	.entry-content--ra {
+		margin-left: 12em;
+		position: relative;
+	}
+
+}
+
+
+@media screen and (min-width: $desktop){
+
+	
+	.entry-content--ra {
+		margin-left: 20em;
+
+		p:first-of-type {
+			font-size: 1.25em;
+			font-weight: 700;
+		}
+	}
+
+	
+}

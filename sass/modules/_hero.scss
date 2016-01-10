@@ -6,9 +6,9 @@
  */
 
 .section__welcome {
-  background-image: linear-gradient(183deg, $color__paleblue 35%, #407f00 0%);
+  background-image: linear-gradient(183deg, $color__paleblue 35%, #4e880c 0%);
   margin-bottom: 0;
-  padding: 0.5rem;
+  padding: 0.5rem 0 0 0;
   overflow: hidden;
 }
 
@@ -56,7 +56,7 @@
 .hero__callout {
   background: hsla(0,100%,100%,0.3);
   border-radius: 6px;
-  margin-bottom: 0.5em;
+  margin: 0 1em 0.5em;
 }
 
 .callout-text {
@@ -73,12 +73,13 @@
 
   .hero-wrapper {
     position: relative;
+    padding: 0 calc(50% - 280px);
     z-index: 9;
+    height: 460px;
   }
   
   .section__welcome {
     background-color:#4e880c;
-    min-height: 580px;
     overflow: hidden;
     position: relative;
     z-index:0;
@@ -109,10 +110,6 @@
 
   .welcome-subtitle {
     font-size: 18px;
-  }
-
-  .hero-wrapper {
-    padding: 0 calc(50% - 280px);
   }
 
   .hero {
@@ -179,6 +176,7 @@
     a {
       display: flex;
       align-items: center;
+      height: 150px;
     }
   }
 

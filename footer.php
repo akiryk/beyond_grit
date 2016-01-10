@@ -11,13 +11,11 @@
 
 ?>
 
-	</div><!-- #content -->
-
-	<footer id="colophon" class="footer" role="contentinfo">
-		<div class="site-info">
-		 Footer information will go here. Name of Project. Name of Funders, etc.
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
+<footer id="colophon" class="footer" role="contentinfo">
+	<div class="site-info">
+		Footer information will go here. Name of Project. Name of Funders, etc.
+	</div><!-- .site-info -->
+</footer><!-- #colophon -->
 </div><!-- #page -->
 
 <script>

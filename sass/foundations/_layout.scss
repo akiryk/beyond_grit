@@ -11,15 +11,18 @@
 	margin-bottom: 2em;
 }
 
+.contain {
+	overflow: hidden;
+}
+
 
 // Media Queries
 @media screen and (min-width: $desktop-content-width){
 
-	.section,
 	.site-branding,
+	.main-navigation,
 	.content-main,
-	.footer,
-	.type-page {
+	.footer{
 	  @include centered-content();
 	}
 

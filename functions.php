@@ -132,11 +132,27 @@ function beyond_grit_scripts() {
 
   wp_enqueue_style( 'beyond_grit-fonts', 'https://fonts.googleapis.com/css?family=Londrina+Solid|Open+Sans+Condensed:700|Open+Sans:400,400italic,700,700italic');
 
-  if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-    wp_enqueue_script( 'comment-reply' );
-  }
+  if ( is_page_template('page-templates/participating-organizations.php') ) {
+    wp_enqueue_script('organizations', get_template_directory_uri() . '/js/map.js');
+    wp_enqueue_script('googleMaps', 
+      'https://maps.googleapis.com/maps/api/js?key=AIzaSyA9_V4fG-umELVwoyKKRm4jQ8XODuwV9MA&callback=map.init',
+       array(), // dependencies
+       '1.0.0', // version
+       true // in footer 
+       );
+  } 
+
 }
 add_action( 'wp_enqueue_scripts', 'beyond_grit_scripts' );
+
+/** 
+ * Enqueue scripts for the Participating Organizations template
+ */
+function beyond_grit_template_scripts(){
+   
+}
+add_action('wp_enqueue_scripts','beyond_grit_template_scripts');
+
 
 
 /**

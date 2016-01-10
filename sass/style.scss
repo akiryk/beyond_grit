@@ -34,10 +34,10 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 // Modules
 @import "modules/hero"; // The people icon with orbiting concepts
 @import "modules/frontpage"; // The people icon with orbiting concepts
-@import "modules/navigation";
 @import "modules/accessibility";
 @import "modules/masthead";
-@import "modules/page";
+@import "modules/page-standard";
+@import "modules/page-research-areas";
 @import "modules/links";
 @import "modules/home-nav";
 @import "modules/page-nav";
@@ -45,3 +45,4 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 @import "modules/footer";
 @import "modules/images";
 @import "modules/wp";
+@import "modules/google-map";

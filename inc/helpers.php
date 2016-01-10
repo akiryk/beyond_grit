@@ -38,7 +38,7 @@ function print_menu_if_exists( $menu_name, $menu_title = '') {
 	    'menu_class'      => 'resource-links'
 	  );
 
-	  echo '<div class="section--frontpage__resources">';
+	  echo '<div class="section--fp__resources">';
 
 	  if ( !empty( $menu_title ) ) {
 	  	echo '<h5 class="resources__title">' . $menu_title . '</h5>';
