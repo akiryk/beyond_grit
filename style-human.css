@@ -1135,7 +1135,6 @@ img {
   color: white;
   display: block;
   margin-bottom: 2em;
-  padding: 0 calc(50% - 32em );
   width: 100%;
   content: "";
   display: table;
@@ -1261,6 +1260,7 @@ img {
 @media screen and (min-width: 68em) {
   .page-navigation {
     margin-top: 1em;
+    padding: 0 calc(50% - 32em );
   }
 
   .menu--page .menu-item {

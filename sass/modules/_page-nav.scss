@@ -14,9 +14,10 @@
 	color: white;
   display: block;
   margin-bottom: 2em;
-	padding: 0 calc(50% - #{$desktop-content-width/2} );
   width: 100%;
+
   @include clearfix();
+
 }
 
 
@@ -180,6 +181,7 @@
 
 	.page-navigation {
 		margin-top: 1em;
+		padding: 0 calc(50% - #{$desktop-content-width/2} );
 	}
   
   .menu--page {
