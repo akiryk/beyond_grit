@@ -698,7 +698,7 @@ img {
   color: #0089c9;
   font-size: 14px;
 }
-.resource-links a:hover {
+.resource-links a:hover, .resource-links a:active {
   text-decoration: underline;
 }
 
@@ -714,7 +714,7 @@ img {
   transition: all .25s;
   text-transform: uppercase;
 }
-.more-link:hover {
+.more-link:hover, .more-link:active {
   background: #0089c9;
   color: white;
 }
@@ -1173,6 +1173,12 @@ img {
   border: none;
   border-bottom: 1px solid rgba(255, 255, 255, 0.25);
   padding: 0.5em 1em;
+}
+.menu-toggle:active {
+  background: #336600;
+}
+.menu-toggle:focus {
+  outline: none;
 }
 
 @media screen and (min-width: 43.5em) {

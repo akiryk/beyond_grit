@@ -80,6 +80,14 @@
   border: none;
   border-bottom: 1px solid hsla(0,100%,100%,0.25);
   padding: 0.5em 1em;
+
+  &:active {
+		background: #336600;
+  }
+
+  &:focus {
+  	outline: none;
+  }
 }
 
 @media screen and (min-width: $tablet) {
