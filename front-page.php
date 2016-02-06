@@ -19,7 +19,7 @@ get_header(); ?>
           if ( $query->have_posts() ){
             while( $query->have_posts() ){
               $query->the_post();
-              echo '<h2 class="section-title section-title--fp">' . get_the_title() . '</h2>';
+              echo '<h2 class="section-title section-title--fp"><a href="' . get_permalink() . '">' . get_the_title() . '</a></h2>';
               echo '<div class="entry-content  entry-content--fp">';
               the_content();
               echo '</div>';
@@ -42,7 +42,7 @@ get_header(); ?>
           if ( $query->have_posts() ){
             while( $query->have_posts() ){
               $query->the_post();
-              echo '<h2 class="section-title section--fp__entry-title">' . get_the_title() . '</h2>';
+              echo '<h2 class="section-title section-title--fp"><a href="' . get_permalink() . '">' . get_the_title() . '</a></h2>';
               echo '<div class="entry-content entry-content--fp">';
               the_content();
               echo '</div>';
@@ -67,7 +67,7 @@ get_header(); ?>
           if ( $query->have_posts() ){
             while( $query->have_posts() ){
               $query->the_post();
-              echo '<h2 class="section-title section--fp__entry-title">' . get_the_title() . '</h2>';
+              echo '<h2 class="section-title section-title--fp"><a href="' . get_permalink() . '">' . get_the_title() . '</a></h2>';
               echo '<div class="entry-content entry-content--fp">';
               the_content();
               echo '</div>';

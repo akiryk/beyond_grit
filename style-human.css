@@ -124,7 +124,7 @@ svg:not(:root) {
 }
 
 figure {
-  margin: 1em 40px;
+  margin: 0;
 }
 
 hr {
@@ -1292,12 +1292,17 @@ img {
 
 .alignleft {
   float: left;
-  margin: 1em 1.5em 1em 0;
+  margin: 0 1.5em 1em 0;
   width: 33.3333%;
 }
 
 .page__theme-image--left {
   margin-bottom: 1em;
+}
+
+.wp-caption-text {
+  font-size: 0.875rem;
+  line-height: 1.5;
 }
 
 @media screen and (min-width: 700px) {
@@ -1320,6 +1325,10 @@ img {
   position: relative;
   padding: 0;
   font-weight: 900;
+}
+
+.entry-footer {
+  clear: both;
 }
 
 .post-edit-link {
