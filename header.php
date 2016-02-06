@@ -29,13 +29,12 @@
 
     <header id="welcome" class="section section__welcome" role="banner">
 
-      <h1 class="welcome-title">Powerful Youth, Powerful Communities</h1>
-      <div class="welcome-subtitle">A Resource For Learning About Youth Organizing</div>
+      <h1 class="welcome-title"><?php bloginfo( 'name' ); ?></h1>
+      <div class="welcome-subtitle"><?php bloginfo( 'description' ); ?></div>
 
       <nav class="hero-wrapper" role="navigation">
         <ul class="hero">
-          <li class="hero__primary">
-          </li>
+          <li class="hero__primary"></li>
           <li class="hero__callout hero__callout--left"><a href="#critical-thinking"><span class="callout-text">Critical Thinking and Analysis</span></a></li>
           <li class="hero__callout hero__callout--center"><a href="#community"><span class="callout-text">Community Leadership and Action</span></a></li>
           <li class="hero__callout hero__callout--right"><a href="#social-emotional"><span class="callout-text">Social and Emotional Development</span></a></li>
