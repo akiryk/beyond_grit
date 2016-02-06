@@ -30,7 +30,7 @@
     <header id="welcome" class="section section__welcome" role="banner">
 
       <h1 class="welcome-title"><?php bloginfo( 'name' ); ?></h1>
-      <div class="welcome-subtitle">A Resource For Learning sssAbout Youth Organizing</div>
+      <div class="welcome-subtitle"><?php bloginfo( 'description' ); ?></div>
 
       <nav class="hero-wrapper" role="navigation">
         <ul class="hero">
