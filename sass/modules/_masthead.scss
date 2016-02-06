@@ -31,21 +31,37 @@
   font-family: $font__headings--webfont;
 }
 
-@media screen and (min-width: 58.75em){
+@media screen and (min-width: $tablet){
 
-  .logo-wrapper {
-    flex: 2 1 auto;
+  .section--masthead {
+    background: $color__paleblue url(images/page-header_12_22b.svg) no-repeat center center;
+    background-size: 1652px 141px;
   }
+
+  .site-branding {
+    height: 140px;
+    align-items: center;
+  }
+  
+  .logo-wrapper {
+    flex: 0 1 150/16*1em;
+    height: 110px;
+  }
+
+  .site-title {
+    flex: 1 0 auto;
+    font-size: 2em;
+    margin: 0;
+  }
+
+}
+
+@media screen and (min-width: $desktop){
 
   .site-branding {
     height: 140px;
     justify-content: space-between;
     align-items: baseline;
-  }
-
-  .section--masthead {
-    background: $color__paleblue url(images/page-header_12_22b.svg) no-repeat center center;
-    background-size: 1652px 141px;
   }
 
   .site-title {

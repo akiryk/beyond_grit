@@ -35,7 +35,8 @@
 		color: $color__blue-link;
 		font-size: 14px;
 
-		&:hover {
+		&:hover,
+		&:active {
 			text-decoration: underline;
 		}
 	}
@@ -53,7 +54,8 @@
   transition: all .25s;
   text-transform: uppercase;
 
-  &:hover {
+  &:hover,
+  &:active {
   	background: #0089c9;
   	color: white;
   }
