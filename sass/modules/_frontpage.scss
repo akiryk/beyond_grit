@@ -9,6 +9,8 @@
 .content-main--frontpage {
 	padding-top: 2em;
 	padding-bottom: 2em;
+	margin: 0 auto;
+	max-width: 50em;
 }
 
 .inner-section--fp {
@@ -85,22 +87,16 @@
 	.entry-content--fp {
 		flex: 0 0 auto;
 		margin-right: 5%;
-		width: 65%;
+		width: 100%;
+		max-width: none;
 	}
 
- 	.section--fp__resources {
+	.entry-content--fp-right {
 		flex: 0 0 auto;
-		width: 30%
+		width: 100%;
+		max-width: none;
 	}
 
-	.resource-links {
-		li {
-			border-bottom: 1px solid #ccc;
-			line-height: 1.3;
-			padding-bottom: 6px;
-			margin-bottom: 4px;
-		}
-	}
 
 }
 
@@ -109,6 +105,8 @@
 	
 	.content-main--frontpage {
 		background-color: #ece7cc;
+		margin: initial;
+		max-width: none;
 	}
 
 	.section--fp {
@@ -131,39 +129,30 @@
 		@include bottom-shadow();
 	}
 
-	.resource-links {
-		li {
-			border-bottom: none;
-			padding-bottom: 0;
-			margin-bottom: 6px;
-		}
+	.entry-content--fp {
+		width: 65%;
+	}
+
+	.entry-content--fp-right {
+		width: 63%;
 	}
 
 	// Icon images for front page
 
 	#critical-thinking > .inner-section--fp {
-		background: $color__inner-section url(images/critical-thinking.gif) no-repeat right bottom;
-		background-size: 174px;
+		background: $color__inner-section url(images/critical-thinking-500.gif) no-repeat right bottom;
+		background-size: 250px;
 	}
 	
 	// Community is a special case: image overlaps the content area.
 	#community > .inner-section--fp {
-		position: relative;
-		
-		&:after {
-			content: " ";
-			position: absolute;
-			bottom: -34px;
-			right: 0;
-			width: 285px;
-			height: 136px;
-			background: url(images/community-leadership.gif) no-repeat right bottom;
-			background-size: 100%;
-		}
+		background: $color__inner-section url(images/community-leadership-right.gif) no-repeat left center;
+		background-size: 360px;
+		justify-content: flex-end;
 	}
 
 	#social-emotional > .inner-section--fp {
-		background: $color__inner-section url(images/social-emotional.gif) no-repeat right bottom;
-		background-size: 134px;
+		background: $color__inner-section url(images/social-emotional-402.gif) no-repeat 93% bottom;
+		background-size: 200px;
 	}
 }
