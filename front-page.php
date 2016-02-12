@@ -1,4 +1,4 @@
-<?php
+  <?php
 /**
  * Custom home page based on underscore's page template.
  *
@@ -75,7 +75,7 @@ get_header(); ?>
           }
 
           /* Display list of resource links if they exist. See inc/helpers.php */
-          print_menu_if_exists('Social And Emotional Resources', 'Social Resources');
+          print_menu_if_exists('Social And Emotional Resources', 'Resources');
 
           /* Restore original post data */
           wp_reset_postdata();
