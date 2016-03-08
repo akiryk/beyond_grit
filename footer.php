@@ -13,7 +13,7 @@
 
 <footer id="colophon" class="footer" role="contentinfo">
 	<div class="site-info">
-		Footer information will go here. Name of Project. Name of Funders, etc.
+		The research described on this site was made possible by financial support from The Atlantic Philanthropies, The California Endowment, The Hazen Foundation and The Cricket Island Foundation. 
 	</div><!-- .site-info -->
 </footer><!-- #colophon -->
 </div><!-- #page -->
