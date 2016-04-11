@@ -13,7 +13,7 @@
 
 <footer id="colophon" class="footer" role="contentinfo">
 	<div class="site-info">
-		The research described on this site was made possible by financial support from The Atlantic Philanthropies, The California Endowment, The Hazen Foundation and The Cricket Island Foundation. 
+		The research described on this site was made possible by financial support from The Atlantic Philanthropies, The California Endowment, The Hazen Foundation and The Cricket Island Foundation.
 	</div><!-- .site-info -->
 </footer><!-- #colophon -->
 </div><!-- #page -->
@@ -45,7 +45,7 @@ u();setTimeout(a,50)}}var D=Date.now();w(l,"sans-serif",k);w(m,"serif",k);w(n,"m
     var fontA = new w.FontFaceObserver( "Open Sans" );
     var fontB = new w.FontFaceObserver( "Open Sans Condensed" );
     var fontC = new w.FontFaceObserver( "Londrina Solid" );
-    
+
     w.Promise
       .all([fontA.check(), fontB.check(), fontC.check()])
       .then(function(){
