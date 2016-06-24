@@ -1,0 +1,26 @@
+/*
+ * Download Message
+ *
+ *
+ */
+
+.download-message {
+  background-color: #4e880c;
+  text-align: center;
+  font-weight: 700;
+  padding: 1em ;
+  color: #fefaf0;
+  position: relative;
+}
+
+.page .download-message {
+  margin-top: 2em;
+}
+
+@media screen and (min-width: $desktop){
+
+  .download-message {
+    padding: 2em calc(17.5% + 1em);
+  }
+
+}

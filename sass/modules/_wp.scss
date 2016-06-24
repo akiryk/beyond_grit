@@ -1,7 +1,8 @@
 .edit-link {
-	position: relative;
+	position: absolute;
   padding: 0;
-  font-weight: 900;
+  right: 1px;
+  bottom: -15px;
 }
 
 .entry-footer {
@@ -9,12 +10,13 @@
 }
 
 .post-edit-link {
-	background: #eaea74;
 	display: block;
 	padding: 5px 12px;
 	margin-bottom: 1em;
+  font-weight: 500;
+  color: #999;
 
 	&:hover {
-		background: #c7c71b;
+		color: #333;
 	}
 }

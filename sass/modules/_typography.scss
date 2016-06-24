@@ -1,7 +1,45 @@
-.section-title {
+/*
+ * Typography
+ *
+ *
+ */
+
+ .section-title {
 	color: #2b3501;
-	font-size: 30px;
+	font-size: 36px;
 	letter-spacing: 1px;
 	line-height: 1;
 	margin: 0.25em 0;
+  transition: color .2s ease;
+
+  a:hover {
+    color: $color__blue-link;
+  }
+}
+
+.slug {
+  color: #2b3501;
+  font-size: 21px;
+  letter-spacing: .5px;
+  margin-bottom: 0;
+}
+
+.page-slug {
+  margin-bottom: 0.5em;
+}
+
+.introduction {
+  font-style: italic;
+}
+
+.editorial-note {
+  color: #777;
+  font-size: 14px;
+  font-style: italic;
+}
+
+@media screen and (min-width: $desktop){
+  .page-slug {
+    margin-bottom: 1em;
+  }
 }

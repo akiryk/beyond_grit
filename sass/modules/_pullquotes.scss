@@ -1,0 +1,63 @@
+/*
+ * Pullquotes
+ *
+ * Override styles used by the Simple Pull Quote wp plugin
+ * https://wordpress.org/plugins/simple-pull-quote/
+ *
+ */
+
+.simplePullQuote {
+  color: $color__green;
+  font-size: 1.25em;
+  font-weight: 600;
+  border-top: 1px solid rgba(64, 127, 0, 0.2);
+  border-bottom: 1px solid rgba(64, 127, 0, 0.2);
+  padding: .25em 1em;
+  margin: 1.5em 1.5em;
+
+  p {
+    margin: .5em 0;
+  }
+}
+
+@media screen and (min-width: $desktop){
+
+  .simplePullQuote {
+    border-top: none;
+    border-bottom: none;
+    color: $color__green;
+    padding: 0;
+    margin: 0 2em;
+
+    p {
+      margin: 1em 0;
+    }
+  }
+
+  .alignleft-outer {
+    float: left;
+    margin-left: -8em;
+    margin-right: 2em;
+    width: 16em;
+    border-right: 1px solid rgba(0,0,0,0.12);
+    padding-right: 1em;
+    width: 16em;
+  }
+
+  .alignright-outer {
+    float: right;
+    margin-right: -8em;
+    margin-left: 2em;
+    border-left: 1px solid rgba(0,0,0,0.12);
+    padding-left: 1em;
+    width: 16em;
+  }
+
+  .aligncenter-outer {
+    border-top: 1px solid rgba(0,0,0,0.12);
+    border-bottom: 1px solid rgba(0,0,0,0.12);
+    margin: 2em -176px;
+    padding: 0 1em;
+    text-align: center;
+  }
+}

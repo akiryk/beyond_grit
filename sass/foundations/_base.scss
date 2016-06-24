@@ -16,7 +16,7 @@ html {
 }
 
 body {
-  background: $color__background-inner;
+  background: #fefaf0;
 }
 
 body,
@@ -64,6 +64,7 @@ h6 {
 a {
   color: inherit;
   text-decoration: none;
+  transition: color .2s ease;
 }
 
 p {
@@ -76,9 +77,9 @@ img {
   height: auto;
 }
 
-@media screen and (min-width: $desktop){
+@media screen and (min-width: $desktop-content-width){
   body {
-    background: $color__background-body;
+    // background: #ece7cc;
+    background: #cad9df;
   }
-  
 }

@@ -22,7 +22,7 @@
 
 @mixin bottom-shadow(){
 	position: relative;
-	
+
 	&:before {
 			border-radius: 100px / 10px;
 			box-shadow: 0 0 15px rgba(0,0,0,0.6);
@@ -33,7 +33,8 @@
 			left: 0;
 			right: 0;
 			bottom: 0;
-			height: 100px;
+			height: 20px;
+      transition: box-shadow .2s ease;
 			z-index: -2;
-		}	
+		}
 }

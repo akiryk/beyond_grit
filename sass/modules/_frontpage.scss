@@ -6,16 +6,25 @@
  *
  */
 
-.content-main--frontpage {
-	padding-top: 2em;
-	padding-bottom: 2em;
+.content-main {
 	margin: 0 auto;
-	max-width: 50em;
+	padding: 0 calc(50% - 24em);
+}
+
+.content-main.content-main--frontpage {
+	padding-top: 2em;
 }
 
 .inner-section--fp {
+  background: #fefaf0;
+  max-width: 40em; // 640px
+  margin: 0 auto;
 	padding: 0 1em;
-}	
+}
+
+.story-heading {
+	margin-bottom: 2em;
+}
 
 .section-title--fp {
 	text-transform: uppercase;
@@ -28,56 +37,27 @@
 	text-transform: uppercase;
 }
 
-.resource-links {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-
-	a {
-		color: $color__blue-link;
-		font-size: 14px;
-
-		&:hover,
-		&:active {
-			text-decoration: underline;
-		}
-	}
+.shadowed {
+	@include bottom-shadow();
 }
-
-.more-link {
-	border: 2px solid #0089c9;
-  color: #0089c9;
-  display: inline-block;
-  font-family: 'Londrina Solid', sans-serif;
-  font-size: 20px;
-  letter-spacing: 1px;
-  margin-top: 1rem;
-  padding: .25em 1.25em;
-  transition: all .25s;
-  text-transform: uppercase;
-
-  &:hover,
-  &:active {
-  	background: #0089c9;
-  	color: white;
-  }
-}
-
 
 // Media Queries
 
-@media screen and (min-width: 35em){
+@media screen and (min-width: $tablet){
 
- 	.content-main--frontpage {
+ 	.content-main {
 		background-color: $color__background-inner;
 		position: relative;
 	}
 
 	.inner-section--fp {
  		align-items: baseline;
+ 		background-color: #fefaf0;
 		display: flex;
 		flex-wrap: wrap;
  		flex-direction: row;
+ 		padding: 0 1.5em;
+ 		max-width: none;
  	}
 
 	.section-title--fp {
@@ -91,6 +71,10 @@
 		max-width: none;
 	}
 
+	.entry-content--fp-centered {
+		margin: 0 auto;
+	}
+
 	.entry-content--fp-right {
 		flex: 0 0 auto;
 		width: 100%;
@@ -102,11 +86,12 @@
 
 
 @media screen and (min-width: $desktop){
-	
-	.content-main--frontpage {
-		background-color: #ece7cc;
+
+	.content-main {
+		background-color: #fefaf0;
 		margin: initial;
 		max-width: none;
+		padding: 0 calc(50% - 32em);
 	}
 
 	.section--fp {
@@ -122,10 +107,7 @@
 		flex: 0 1 auto;
 	}
 
-	.inner-section--fp {
-		background-color: #fefaf0;
-		padding: 2em;
-
+	.download-message {
 		@include bottom-shadow();
 	}
 
@@ -143,7 +125,7 @@
 		background: $color__inner-section url(images/critical-thinking-500.gif) no-repeat right bottom;
 		background-size: 300px;
 	}
-	
+
 	// Community is a special case: image overlaps the content area.
 	#community > .inner-section--fp {
 		background: $color__inner-section url(images/community-leadership-right.gif) no-repeat left center;
@@ -154,5 +136,14 @@
 	#social-emotional > .inner-section--fp {
 		background: $color__inner-section url(images/social-emotional-402.gif) no-repeat 93% bottom;
 		background-size: 200px;
+	}
+}
+
+@media screen and (min-width: $desktop-content-width){
+	.inner-section--fp {
+		background-color: #fefaf0;
+		padding: 2em;
+
+		@include bottom-shadow();
 	}
 }

@@ -1,13 +1,13 @@
-/* 
+/*
  * Styles for the page content type
  *
  * See page.php and
  * template-parts/content-page.php
- * 
+ *
  */
 
 .inner-content {
-	padding: 0 1em;
+	padding: 1em;
 }
 
 .entry-title {
@@ -28,13 +28,14 @@
 	.inner-content {
 		background: $color__background-inner;
 		margin-bottom: 2em;
-		padding: 0 2em;
+		padding: 2em;
 
 	}
 
 	.entry-content {
+		margin: 0 auto;
 		position: relative;
-		max-width: 40em;
+		max-width: 38em;
 	}
 
 	.entry-title {
@@ -43,12 +44,16 @@
 
 }
 
-@media screen and (min-width: $desktop){
+@media screen and (min-width: $desktop-content-width){
 
 	.inner-content {
 		padding: 2em;
 		@include bottom-shadow();
 	}
 
-	
+	.content-main {
+		background-color: #ece7cc;
+		padding: 2em calc(50% - 32em);
+	}
+
 }

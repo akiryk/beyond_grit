@@ -1,0 +1,62 @@
+/*
+ * Buttons and Links
+ *
+ */
+
+// Mixins come first
+
+@mixin linkToButton() {
+  display: inline-block;
+  font-family: 'Londrina Solid', sans-serif;
+  font-size: 20px;
+  letter-spacing: 1px;
+  margin-top: 1rem;
+  padding: .25em 1.25em;
+  transition: all .25s;
+  text-transform: uppercase;
+}
+
+// Styles
+
+.resource-links {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  a {
+    color: $color__blue-link;
+    font-size: 14px;
+
+    &:hover,
+    &:active {
+      text-decoration: underline;
+    }
+  }
+}
+
+.more-link {
+  @include linkToButton();
+  border: 2px solid #0089c9;
+  color: #0089c9;
+
+  &:hover,
+  &:active {
+    background: #0089c9;
+    color: white;
+  }
+}
+
+.download-link {
+  @include linkToButton();
+  background-color: #fefaf0;
+  color: #4e880c;
+
+  &:hover,
+  &:active {
+    background-color: #fefaf0;
+    box-shadow: inset 0 0 0 1px #84ad55, inset 0 0 0 2px #4e880c, 0 2px 14px rgba(0,0,0,0.6);
+  }
+
+
+}
+

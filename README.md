@@ -11,6 +11,7 @@ If you want to change fonts, do it in the enqueue scripts function in functions.
 
 Getting Started
 ---------------
+Theme makes use of several page templates. The main research areas under navigation all point to pages that are designed according to the page-templates/research-area.php file. The Itzel Story uses itzel-story.php. As of now, no pages use the standard page.php template.
 
 Branches
 --------
@@ -18,5 +19,5 @@ Phase1 branch includes a working theme featuring a selection of "resource" links
 
       print_menu_if_exists('Critical Thinking Resources', 'Resources');
 
- 
+
 
