@@ -90,7 +90,8 @@ div.wpcf7-response-output {
 }
 
 span.wpcf7-list-item {
-  margin-left: 1.5em;
+  display: block;
+  margin: 1em 0;
 }
 span.wpcf7-list-item:first-of-type {
   margin-left: 0;
