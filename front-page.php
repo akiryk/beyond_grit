@@ -8,7 +8,6 @@
  */
 
 get_header(); ?>
-
     <main id="main" class="content-main content-main--frontpage" role="main">
       <section id="itzel-story" class="section section--fp">
 
@@ -37,13 +36,9 @@ get_header(); ?>
               the_content();
               echo '</div>';
               echo '</div>';
-              echo '<div class="download-message">';
-              $downloadMsg = get_post_meta(get_the_ID(), 'download-message', true);
-              $downloadCTA = get_post_meta(get_the_ID(), 'download-cta', true);
-              $downloadURL = get_post_meta(get_the_ID(), 'download-url', true);
-              echo '<div>' . $downloadMsg . '</div>';
-              echo '<a href="' . $downloadURL . '" class="download-link shadowed">' . $downloadCTA . '</a>';
-              echo '</div>';
+
+              get_template_part( 'template-parts/content', 'get-report' );
+
             }
           }
 

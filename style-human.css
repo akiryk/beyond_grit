@@ -1116,8 +1116,7 @@ img {
   color: #0089c9;
 }
 .more-link:hover, .more-link:active {
-  background: #0089c9;
-  color: white;
+  box-shadow: inset 0 0 0 1px #fff, inset 0 0 0 2px #0089c9, 0 2px 12px rgba(0, 0, 0, 0.45);
 }
 
 .download-link {
@@ -1135,6 +1134,32 @@ img {
 .download-link:hover, .download-link:active {
   background-color: #fefaf0;
   box-shadow: inset 0 0 0 1px #84ad55, inset 0 0 0 2px #4e880c, 0 2px 14px rgba(0, 0, 0, 0.6);
+}
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  display: inline-block;
+  font-family: 'Londrina Solid', sans-serif;
+  font-size: 20px;
+  letter-spacing: 1px;
+  margin-top: 1rem;
+  padding: .25em 1.25em;
+  transition: all .25s;
+  text-transform: uppercase;
+  border: 2px solid #0089c9;
+  color: #0089c9;
+}
+button:hover, button:active,
+input[type="button"]:hover,
+input[type="button"]:active,
+input[type="reset"]:hover,
+input[type="reset"]:active,
+input[type="submit"]:hover,
+input[type="submit"]:active {
+  background: #0089c9;
+  color: white;
 }
 
 .section--home-navigation {
@@ -1572,6 +1597,75 @@ img {
   .download-message {
     padding: 2em calc(17.5% + 1em);
   }
+}
+/*
+ * Styles for Forms Built with the Contact 7 plugin
+ *
+ * http://contactform7.com/additional-settings/
+ *
+ */
+.wpcf7-form {
+  background: #ece7cc;
+  color: #3b2d00;
+}
+.wpcf7-form p {
+  padding: 0 2rem;
+}
+
+.wpcf7-title {
+  background: #dad4b2;
+  font-weight: 700;
+  padding: 1rem 2rem;
+}
+
+.wpcf7-form.sent > p,
+.wpcf7-form.sent .wpcf7-title {
+  display: none;
+}
+
+.wpcf7-form input:not([type="submit"]) {
+  background: rgba(255, 255, 255, 0.75);
+  border: none;
+  width: 100%;
+  line-height: 2.0;
+  padding: 0 12px;
+  margin-top: 4px;
+}
+
+.wpcf7-form input[type="button"],
+.wpcf7-form input[type="reset"],
+.wpcf7-form input[type="submit"] {
+  border-color: #3b2d00;
+  background-color: #3b2d00;
+  color: #ece7cc;
+}
+
+.wpcf7-form p {
+  font-size: 14px;
+}
+
+input.wpcf7-not-valid {
+  background-color: #fff !important;
+  border: 2px solid #e26b0e !important;
+  color: #e26b0e !important;
+}
+
+.wpcf7-not-valid-tip {
+  color: #e2110e !important;
+}
+
+div.wpcf7-response-output {
+  border: none;
+  font-weight: 700;
+  margin: 0;
+  padding: 1rem 2rem;
+  background: #d3eaba;
+  color: #3b2d00;
+  text-align: center;
+}
+
+.invalid .wpcf7-response-output {
+  background-color: #e26b0e;
 }
 
 /*# sourceMappingURL=style-human.css.map */

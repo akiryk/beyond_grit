@@ -26,6 +26,9 @@ $font__line-height-pre: 1.6;
 
 $color__background-hero: #5c930d;
 $color__background-body: #ece7cc;
+$background-dark-tan: #ece7cc;
+$background-light-tan: #fefaf0;
+$color__alert: #e26b0e;
 $color__background-inner: #fefaf0;
 $color__background-screen: #f1f1f1;
 $color__menu-home: #aac680; // light green
@@ -33,6 +36,7 @@ $color__menu-page: #2b3501;
 $color__green: #407F00; // top green from hero background image
 $color__paleblue: #cad9DF; // blue from hero background image
 $color__brown: #3b2d00;
+$text-color: $color__brown;
 $color__text-main: $color__brown; // dark brown
 $color__text-screen: #21759b;
 $color__callout-fill: #2b3501;

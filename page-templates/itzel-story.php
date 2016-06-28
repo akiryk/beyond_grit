@@ -15,16 +15,7 @@ get_header(); ?>
 
     <div class="inner-content inner-content--page">
       <?php get_template_part( 'template-parts/content', 'itzel-story' ); ?>
-
-      <?php
-      echo '<div class="download-message">';
-      $downloadMsg = get_post_meta(get_the_ID(), 'download-message', true);
-      $downloadCTA = get_post_meta(get_the_ID(), 'download-cta', true);
-      $downloadURL = get_post_meta(get_the_ID(), 'download-url', true);
-      echo '<div>' . $downloadMsg . '</div>';
-      echo '<a href="' . $downloadURL . '" class="download-link shadowed">' . $downloadCTA . '</a>';
-      echo '</div>';
-     ?>
+      <?php get_template_part( 'template-parts/content', 'get-report' ); ?>
     </div>
 
   <?php endwhile; // End of the loop. ?>

@@ -1,0 +1,76 @@
+/*
+ * Styles for Forms Built with the Contact 7 plugin
+ *
+ * http://contactform7.com/additional-settings/
+ *
+ */
+
+.wpcf7-form {
+  background: $background-dark-tan;
+  color: $text-color;
+
+  p {
+    padding: 0 2rem;
+  }
+}
+
+.wpcf7-title {
+  background: #dad4b2;
+  font-weight: 700;
+  padding: 1rem 2rem;
+}
+
+.wpcf7-form.sent {
+  > p,
+  .wpcf7-title {
+    display: none;
+  }
+}
+
+.wpcf7-form input:not([type="submit"]) {
+  background: rgba(255,255,255,0.75);
+  border: none;
+  width: 100%;
+  line-height: 2.0;
+  padding: 0 12px;
+  margin-top: 4px;
+}
+
+.wpcf7-form {
+  input[type="button"],
+  input[type="reset"],
+  input[type="submit"] {
+    border-color: $color__brown;
+    background-color: $color__brown;
+    color: $background-dark-tan;
+  }
+}
+
+.wpcf7-form p {
+  font-size: 14px;
+}
+
+input.wpcf7-not-valid {
+  background-color: #fff !important;
+  border: 2px solid $color__alert !important;
+  color: $color__alert !important;
+}
+
+.wpcf7-not-valid-tip {
+  color: #e2110e !important;
+}
+
+// Override plugin styles
+div.wpcf7-response-output {
+  border: none;
+  font-weight: 700;
+  margin: 0;
+  padding: 1rem 2rem;
+  background: #d3eaba;
+  color: $color__brown;
+  text-align: center;
+}
+
+.invalid .wpcf7-response-output {
+  background-color: $color__alert;
+}
