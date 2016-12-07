@@ -38,7 +38,7 @@
           <li class="hero__primary"></li>
           <li class="hero__callout hero__callout--left"><a href="#critical-thinking"><span class="callout-text">Critical Thinking and Analysis</span></a></li>
           <li class="hero__callout hero__callout--center"><a href="#community"><span class="callout-text">Community Leadership and Action</span></a></li>
-          <li class="hero__callout hero__callout--right"><a href="#social-emotional"><span class="callout-text">Social and Emotional Development</span></a></li>
+          <li class="hero__callout hero__callout--right"><a href="#social-emotional"><span class="callout-text">Social and Emotional Learning</span></a></li>
         </ul>
       </nav>
 

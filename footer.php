@@ -13,7 +13,8 @@
 
 <footer id="colophon" class="footer" role="contentinfo">
 	<div class="site-info">
-		The research described on this site was made possible by financial support from The Atlantic Philanthropies, The California Endowment, The Hazen Foundation and The Cricket Island Foundation.
+		<p>The research described on this site was made possible by financial support from The Atlantic Philanthropies, The California Endowment, The Hazen Foundation and The Cricket Island Foundation.</p>
+    <p>Thank you to <a href="http://favianna.tumblr.com/" target="_BLANK" class="underlined">Favianna Rodriguez</a> for all illustrations on this site.</p>
 	</div><!-- .site-info -->
 </footer><!-- #colophon -->
 </div><!-- #page -->

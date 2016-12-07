@@ -45,6 +45,10 @@
   }
 }
 
+.underlined {
+  text-decoration: underline;
+}
+
 .download-link {
   @include linkToButton();
   background-color: #fefaf0;

@@ -3,7 +3,7 @@
 	text-align: center;
 	color: $color__footer-text;
 	font-size: 13px;
-	padding: 24px 0 240px 0;
+	padding: 2px 0 240px 0;
 	position: relative;
 }
 
@@ -12,10 +12,6 @@
 }
 
 @media screen and (min-width: $desktop){
-
-	.footer {
-		padding: 24px 0 240px 0;
-	}
 
 	.footer .site-info {
 		padding: 0 calc(50% - #{$desktop-content-width/2} );
