@@ -1,7 +1,22 @@
+img {
+  max-width: 100% !important; // needs to over-ride Wordpress inline style.
+}
+
 .alignleft {
   float: left;
   margin: 0 1.5em 1em 0;
-  width: 33.3333%;
+  width: 33.3333% !important; // needs to over-ride Wordpress inline style.
+}
+
+.alignright {
+  float: right;
+  margin: 0 0 1em 1.5em;
+  width: 33.3333% !important; // needs to over-ride Wordpress inline style.
+}
+
+figure.aligncenter,
+figure.alignnone {
+  width: 100% !important;
 }
 
 .page__theme-image--left {
@@ -9,8 +24,10 @@
 }
 
 .wp-caption-text {
+  color: #777;
 	font-size: 0.875rem;
 	line-height: 1.5;
+  margin-top: 0.25rem;
 }
 
 @media screen and (min-width: 700px){
@@ -37,14 +54,18 @@
 		border: none;
 		padding: 0;
 		margin: 0 3em 1em -8em;
-		width: 18em;
+		width: 18em !important; // needs to over-ride Wordpress inline style.
 	}
 
 	.alignimage-outerright {
     border: none;
 		padding: 0;
 		margin: 0 -8em 1em 3em;
-		width: 18em;
+		width: 18em !important; // needs to over-ride Wordpress inline style.
+  }
+
+  .alignright .wp-caption-text {
+    margin-left: 3em;
   }
 
 }
