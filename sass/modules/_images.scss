@@ -14,8 +14,8 @@ img {
   width: 33.3333% !important; // needs to over-ride Wordpress inline style.
 }
 
-figure.aligncenter,
-figure.alignnone {
+.aligncenter,
+.alignnone {
   width: 100% !important;
 }
 
@@ -50,22 +50,26 @@ figure.alignnone {
 	  left: -20rem;
 	}
 
-	.alignimage-outerleft {
+	.alignleft {
 		border: none;
 		padding: 0;
 		margin: 0 3em 1em -8em;
 		width: 18em !important; // needs to over-ride Wordpress inline style.
 	}
 
-	.alignimage-outerright {
+	.alignright {
     border: none;
 		padding: 0;
 		margin: 0 -8em 1em 3em;
 		width: 18em !important; // needs to over-ride Wordpress inline style.
   }
 
-  .alignright .wp-caption-text {
-    margin-left: 3em;
+  .alignleft.inner {
+    margin-left: 0;
   }
+  .alignright.inner {
+    margin-right: 0;
+  }
+
 
 }

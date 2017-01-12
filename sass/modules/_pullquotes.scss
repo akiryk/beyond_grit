@@ -35,28 +35,27 @@
   }
 
   .simplePullQuote,
-  .alignleft-outer {
+  .pullquote-left {
     float: left;
-    margin-left: -8em;
-    margin-right: 2em;
-    width: 16em;
+    margin-left: -8rem;
+    margin-right: 3rem;
+    width: 16rem;
     border-right: 1px solid rgba(0,0,0,0.12);
-    padding-right: 1em;
-    width: 16em;
+    padding-right: 1rem;
+    width: 18rem;
   }
 
-  .alignright-outer {
+  .pullquote-right {
     float: right;
-    margin-right: -8em;
-    margin-left: 2em;
+    margin-right: -8rem;
+    margin-left: 3rem;
     border-left: 1px solid rgba(0,0,0,0.12);
     border-right: none;
-    padding-left: 1em;
-    width: 16em;
+    padding-left: 1rem;
+    width: 18rem;
   }
 
-  .simplePullQuote.aligncenter,
-  .aligncenter-outer {
+  .pullquote-center {
     border-left: none;
     border-right: none;
     float: none;
@@ -66,5 +65,13 @@
     padding: 0 1em;
     text-align: center;
     width: auto;
+  }
+
+  .pullquote-left.inner {
+    margin-left: 0;
+  }
+
+  .pullquote-right.inner {
+    margin-right: 0;
   }
 }
