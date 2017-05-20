@@ -15,7 +15,6 @@
 get_header(); ?>
 
 <main id="main" class="content-main content-main--page" role="main">
-
 	<?php while ( have_posts() ) : the_post(); ?>
 
 		<div class="inner-content inner-content--page">
@@ -25,6 +24,6 @@ get_header(); ?>
 	<?php endwhile; // End of the loop. ?>
 
 </main><!-- #main -->
-
-<?php get_sidebar(); ?>
+<?php //No sidebar on pages; only on blog posts ?>
+<?php //get_sidebar(); ?>
 <?php get_footer(); ?>
