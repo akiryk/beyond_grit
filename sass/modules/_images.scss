@@ -44,7 +44,7 @@ img {
 @media screen and (min-width: $desktop){
 
 	.page__theme-image--left {
-		width: 18rem;
+		width: 18rem !important;
 	  position: absolute;
 	  top: 0;
 	  left: -20rem;
@@ -69,6 +69,12 @@ img {
   }
   .alignright.inner {
     margin-right: 0;
+  }
+
+  .size-thumbnail,
+  .thumbnail-image {
+    width: 150px !important;
+    margin-left: 0;
   }
 
 
