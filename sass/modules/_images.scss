@@ -53,15 +53,13 @@ img {
 	.alignleft {
 		border: none;
 		padding: 0;
-		margin: 0 3em 1em 0;
-		width: 18em !important; // needs to over-ride Wordpress inline style.
+		margin: 0 2em 1em 0;
 	}
 
 	.alignright {
     border: none;
 		padding: 0;
-		margin: 0 0 1em 3em;
-		width: 18em !important; // needs to over-ride Wordpress inline style.
+		margin: 0 0 1em 2em;
   }
 
   .alignleft.inner {

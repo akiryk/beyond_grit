@@ -3,7 +3,7 @@
   border-bottom: 2px solid;
   padding-bottom: 2rem;
   clear: both;
-  overflow: hidden;
+  @include clearfix;
 }
 
 .post:last-of-type {

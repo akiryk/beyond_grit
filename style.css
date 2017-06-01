@@ -504,7 +504,12 @@ img {
   border-bottom: 2px solid;
   padding-bottom: 2rem;
   clear: both;
-  overflow: hidden;
+}
+
+.post:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 .post:last-of-type {
@@ -1384,14 +1389,12 @@ img {
   .alignleft {
     border: none;
     padding: 0;
-    margin: 0 3em 1em 0;
-    width: 18em !important;
+    margin: 0 2em 1em 0;
   }
   .alignright {
     border: none;
     padding: 0;
-    margin: 0 0 1em 3em;
-    width: 18em !important;
+    margin: 0 0 1em 2em;
   }
   .alignleft.inner {
     margin-left: 0;
@@ -1613,8 +1616,12 @@ img {
   color: #fff;
   display: block;
   width: 100%;
+}
+
+.page-navigation:after {
   content: "";
   display: table;
+  clear: both;
 }
 
 .menu--page {
