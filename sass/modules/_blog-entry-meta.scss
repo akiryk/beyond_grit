@@ -1,0 +1,37 @@
+.blog-entry-meta {
+  font-size: 12px;
+  color: #777; 
+}
+
+.blog-entry-meta a:hover {
+  // text-decoration: underline;
+  color: #111;
+}
+
+// Author and date info inside of the entry-meta
+.posted-on {
+  display: inline-block;  
+  margin-right: 8px;
+  padding-right: 8px;
+  border-right: 1px solid #ccc;
+}
+
+@media screen and (min-width: $desktop) {
+
+  .blog .no-sidebar {
+
+    .blog-entry-meta {
+      border: none;
+      
+      float: right;
+      width: 12rem;
+      margin-right: -14rem;
+      margin-top: 6px;
+      }
+    .posted-on {
+      padding-right: 0;
+      border-right: none;
+    }
+  }
+
+}

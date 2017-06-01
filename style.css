@@ -421,22 +421,6 @@ img {
   margin-bottom: 2rem;
 }
 
-.blog-entry-meta {
-  font-size: .875rem;
-  color: #777;
-}
-
-.blog-entry-meta a:hover {
-  color: #111;
-}
-
-.posted-on {
-  display: inline-block;
-  margin-right: 8px;
-  padding-right: 8px;
-  border-right: 1px solid #ccc;
-}
-
 .cat-links {
   text-transform: uppercase;
   font-size: 12px;
@@ -467,13 +451,15 @@ img {
     width: 66.67%;
     padding: 0;
   }
+  .blog .blog-wrapper.no-sidebar {
+    display: block;
+  }
+  .blog .no-sidebar .blog-content-area {
+    margin-left: 4rem;
+  }
 }
 
 @media screen and (min-width: 66em) {
-  .has-sidebar .simplePullQuote {
-    margin-left: 0;
-    padding-left: 0;
-  }
   .blog .menu--page .menu-item.current-menu-item,
   .blog .menu--page .menu-item.current_page_parent,
   .single .menu--page .menu-item.current-menu-item,
@@ -496,6 +482,36 @@ img {
   }
   .blog-wrapper {
     margin: 2em auto;
+  }
+}
+
+.blog-entry-meta {
+  font-size: 12px;
+  color: #777;
+}
+
+.blog-entry-meta a:hover {
+  color: #111;
+}
+
+.posted-on {
+  display: inline-block;
+  margin-right: 8px;
+  padding-right: 8px;
+  border-right: 1px solid #ccc;
+}
+
+@media screen and (min-width: 66em) {
+  .blog .no-sidebar .blog-entry-meta {
+    border: none;
+    float: right;
+    width: 12rem;
+    margin-right: -14rem;
+    margin-top: 6px;
+  }
+  .blog .no-sidebar .posted-on {
+    padding-right: 0;
+    border-right: none;
   }
 }
 
@@ -1527,6 +1543,7 @@ img {
 .entry-title {
   font-size: 1.75em;
   line-height: 1;
+  letter-spacing: 2px;
 }
 
 .entry-content a {
@@ -1801,9 +1818,31 @@ img {
 }
 
 @media screen and (min-width: 66em) {
+  .has-sidebar .simplePullQuote,
+  .blog .simplePullQuote {
+    margin-left: 0;
+    padding-left: 0;
+    padding-right: 0;
+    border: 0;
+  }
+  .blog .pullquote-left,
+  .has-sidebar .pullquote-left {
+    margin-right: 2rem;
+    margin-left: 0;
+    padding-right: 0;
+  }
+  .blog .pullquote-right,
+  .has-sidebar .pullquote-right {
+    margin-left: 2rem;
+    margin-right: 0;
+    padding-left: 0;
+  }
+  .blog .pullquote-center,
+  .has-sidebar .pullquote-center {
+    margin: 2rem auto;
+  }
   .simplePullQuote {
-    border-top: none;
-    border-bottom: none;
+    border: none;
     color: #407F00;
     padding: 0;
     margin: 0 2em;
@@ -1815,7 +1854,7 @@ img {
   .pullquote-left {
     float: left;
     margin-left: -8rem;
-    margin-right: 3rem;
+    margin-right: 2rem;
     width: 16rem;
     border-right: 1px solid rgba(0, 0, 0, 0.12);
     padding-right: 1rem;
@@ -1824,7 +1863,7 @@ img {
   .pullquote-right {
     float: right;
     margin-right: -8rem;
-    margin-left: 3rem;
+    margin-left: 2rem;
     border-left: 1px solid rgba(0, 0, 0, 0.12);
     border-right: none;
     padding-left: 1rem;

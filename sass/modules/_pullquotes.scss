@@ -21,10 +21,37 @@
 }
 
 @media screen and (min-width: $desktop){
+  
+  // Specifically for blog posts and blog index pages.
+  .has-sidebar .simplePullQuote,
+  .blog .simplePullQuote {
+    margin-left: 0;
+    padding-left: 0;
+    padding-right: 0;
+    border: 0;
+  }
 
+  .blog .pullquote-left,
+  .has-sidebar .pullquote-left {
+    margin-right: 2rem;
+    margin-left: 0;
+    padding-right: 0;
+  }
+
+  .blog .pullquote-right,
+  .has-sidebar .pullquote-right {
+    margin-left: 2rem;
+    margin-right: 0;
+    padding-left: 0;
+  }
+  
+  .blog .pullquote-center,
+  .has-sidebar .pullquote-center {
+    margin: 2rem auto;
+  }
+  // For all non-blog styles
   .simplePullQuote {
-    border-top: none;
-    border-bottom: none;
+    border: none;
     color: $color__green;
     padding: 0;
     margin: 0 2em;
@@ -38,7 +65,7 @@
   .pullquote-left {
     float: left;
     margin-left: -8rem;
-    margin-right: 3rem;
+    margin-right: 2rem;
     width: 16rem;
     border-right: 1px solid rgba(0,0,0,0.12);
     padding-right: 1rem;
@@ -48,7 +75,7 @@
   .pullquote-right {
     float: right;
     margin-right: -8rem;
-    margin-left: 3rem;
+    margin-left: 2rem;
     border-left: 1px solid rgba(0,0,0,0.12);
     border-right: none;
     padding-left: 1rem;
