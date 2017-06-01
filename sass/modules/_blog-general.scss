@@ -1,0 +1,105 @@
+.blog-wrapper {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  max-width: 64rem;
+  margin: auto;
+  padding: 2rem;
+}
+
+// Wraps .blog-content-main
+.blog-content-area {
+  width: 100%; 
+  padding: 0 1rem;
+}
+
+.blog-content-main {
+  background-color: #fff;
+  position: relative;
+}
+
+.blog-entry-header {
+  margin-bottom: 2rem;
+}
+
+.blog-entry-meta {
+  font-size: .875rem;
+  color: #777; 
+}
+
+.blog-entry-meta a:hover {
+  // text-decoration: underline;
+  color: #111;
+}
+
+.posted-on {
+  display: inline-block;  
+  margin-right: 8px;
+  padding-right: 8px;
+  border-right: 1px solid #ccc;
+}
+
+.cat-links {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+
+  a {
+    color: $color__blue-link;
+    font-size: 14px;
+    text-transform: initial;
+    font-weight: 300;
+    display: inline-block;
+    border-bottom: 1px dotted;
+    margin-left: 4px;
+  }
+}
+
+@media screen and (min-width: $tablet) {
+
+  .blog {
+    .menu--page .menu-item.current-menu-item {
+      background-color: #fff;
+      border-bottom: 1px solid #fff;
+      color: darken($color__green, 5);
+
+      &:hover {
+        background: $color__background-inner;
+        color: darken($color__green, 5);
+      }
+    }
+  }
+
+  .blog-content-area {
+    width: 66.67%; 
+    padding: 0;
+  }
+}
+
+@media screen and (min-width: $desktop){
+  .has-sidebar .simplePullQuote {
+    margin-left: 0;
+    padding-left: 0;
+  }
+  .blog, 
+  .single {
+    .menu--page .menu-item.current-menu-item,
+    .menu--page .menu-item.current_page_parent {
+      background-color: $color__grayblue;
+      border: 1px solid $color__grayblue;
+      color: rgba(0,0,0,0.85);
+
+      &:hover {
+        background: $color__grayblue;
+      }
+
+      &:hover a {
+        color: $color__green;
+      }
+    }
+  }
+  .blog-wrapper {
+    margin: 2em auto;
+  }
+}
+

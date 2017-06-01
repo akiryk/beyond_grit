@@ -65,6 +65,7 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
   @include linkToButton();
+  background-color: transparent;
   border: 2px solid #0089c9;
   color: #0089c9;
 

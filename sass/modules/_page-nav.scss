@@ -97,7 +97,7 @@
 
   #primary-menu > li:first-of-type {
     border: none;
-    border-bottom: 1px solid green;
+    // border-bottom: 1px solid green;
 
     & > a {
       display: block; // hide 'Research Areas' link
@@ -133,8 +133,10 @@
 
 	    &:hover {
 	      background: $color__background-inner;
-	      color: darken($color__green, 5);
 	    }
+      &:hover a {
+        //color: darken($color__green, 5);
+      }
 	  }
 
 	  .menu-item:hover > ul,
@@ -212,6 +214,10 @@
 	    &:hover {
 	      background: $color__background-body;
 	    }
+
+      a:hover {
+        color: $color__green;
+      }
 	  }
 
   }

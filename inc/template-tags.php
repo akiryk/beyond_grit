@@ -30,7 +30,7 @@ function beyond_grit_posted_on() {
 	);
 
 	$byline = sprintf(
-		esc_html_x( 'by %s', 'post author', 'beyond_grit' ),
+		esc_html_x( '%s', 'post author', 'beyond_grit' ),
 		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 	);
 
@@ -59,11 +59,14 @@ function beyond_grit_entry_footer() {
 		}
 	}
 
+
+	/* // Disable comments 
 	if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 		echo '<span class="comments-link">';
 		comments_popup_link( esc_html__( 'Leave a comment', 'beyond_grit' ), esc_html__( '1 Comment', 'beyond_grit' ), esc_html__( '% Comments', 'beyond_grit' ) );
 		echo '</span>';
 	}
+	*/
 
 	edit_post_link(
 		sprintf(

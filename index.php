@@ -13,9 +13,14 @@
  */
 
 get_header(); ?>
-
-	<div id="primary" class="content-area">
-		<main id="main" class="content-main" role="main">
+<?php 
+	if ( is_active_sidebar( 'blog-sidebar' ) ) : ?>
+	  <div class="blog-wrapper has-sidebar"> 
+  <?php else : ?>
+		<div class="blog-wrapper no-sidebar"> 
+<?php endif; ?>
+	<div id="primary" class="blog-content-area">
+		<main id="main" class="blog-content-main" role="main">
 		<?php if ( have_posts() ) : ?>
 
 			<?php if ( is_home() && ! is_front_page() ) : ?>

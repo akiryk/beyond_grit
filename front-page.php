@@ -1,4 +1,8 @@
-   <?php
+<?php
+/**
+ * This is the custom home page
+ */
+
 /**
  * Custom home page based on underscore's page template.
  *
@@ -10,7 +14,6 @@
 get_header(); ?>
     <main id="main" class="content-main content-main--frontpage" role="main">
       <section id="itzel-story" class="section section--fp">
-
           <?php
           // the loop
           $query = new WP_query( 'pagename=itzel-story' );

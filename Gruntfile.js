@@ -5,25 +5,14 @@ module.exports = function(grunt) {
 
     pkg: grunt.file.readJSON('package.json'),
 
-    sass: {                             // Task
-      dev: {                            // Target
-        options: {                       // Target options
-          style: 'expanded',
-          sourcemap: 'auto'
-        },
-        files: {                         // Dictionary of files
-          'style-human.css': 'sass/style.scss',
-           // 'destination': 'source'
-        }
+    sass: {
+      options: {
+        outputStyle: 'expanded',
+        sourceMap: true
       },
       dist: {
-        options: {
-          style: 'compressed',
-          sourcemap: 'auto'
-        },
-        files: {                         // Dictionary of files
-          'style.css': 'sass/style.scss',
-           // 'destination': 'source'
+        files: {
+          'style.css': 'sass/style.scss'
         }
       }
     },
@@ -50,7 +39,7 @@ module.exports = function(grunt) {
   });
 
   // Load Grunt plugins
-  grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-postcss');
 

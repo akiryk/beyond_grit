@@ -1,0 +1,51 @@
+/** 
+ * https://wordpress.org/plugins/the-events-calendar/
+ */
+
+.post-type-archive-tribe_events .content-main,
+.tribe_events-template-default .content-main {
+  background-color: transparent;
+}
+
+.post-type-archive-tribe_events .inner-content,
+.tribe_events-template-default .inner-content {
+  background-color: #fff;
+}
+
+.widget-title {
+  font-family: $font__main--webfont !important;
+  font-size: 1.125rem;
+  text-transform: initial !important;
+  font-weight: 100;
+}
+
+.tribe-event-title {
+  font-family: $font__main--webfont !important;
+  text-transform: initial !important;;
+}
+
+.tribe-list-widget {
+  padding-left: 0;
+}
+
+.tribe-events-list-widget .tribe-events-list-widget-events {
+  padding-left: 0;
+}
+
+.tribe-event-duration {
+  font-size: 14px;
+}
+
+.tribe-events-adv-list-widget .tribe-events-widget-link a, 
+.tribe-events-back a, 
+.tribe-events-list-widget .tribe-events-widget-link a, 
+ul.tribe-events-sub-nav a {
+  font-size: 14px;
+  font-weight: 300;
+  color: $color__blue-link;
+}
+
+#tribe-bar-form .tribe-bar-submit input[type=submit] {
+  font-size: 20px;
+  letter-spacing: 1px;  
+}

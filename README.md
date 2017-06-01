@@ -20,4 +20,13 @@ Phase1 branch includes a working theme featuring a selection of "resource" links
       print_menu_if_exists('Critical Thinking Resources', 'Resources');
 
 
-
+Blog
+-----
+Enabling the blog along with the static homepage requires:
+* Create a file called front-page.php. This is a static page with custom content that pulls in parts of several pages.
+* Create a new page called "home" with no content.
+* Create a new page called "blog" with no content.
+* Go to Settings > Reading and set front page to display "Static Page."
+* Set front page to display "home"
+* Set posts page to display "blog"
+Note: Optionally add a home.php file if you want to customize the display of the posts aggregation page. Home.php does not replace front-page.php because it's only for posts.

@@ -42,11 +42,9 @@
         </ul>
       </nav>
 
-      <nav class="section section--home-navigation" role="navigation">
-          <?php wp_nav_menu( array ( 'menu' => 'Front Page Menu', 'menu_class' => 'menu menu--home',) ); ?>
-      </nav>
-
-    </header>
+      <!-- <nav class="section section--home-navigation" role="navigation">
+          <?php // wp_nav_menu( array ( 'menu' => 'Front Page Menu', 'menu_class' => 'menu menu--home',) ); ?>
+      </nav> -->
 
   <?php } else { ?> <!-- Not the front page! -->
 
@@ -55,7 +53,10 @@
       <div class="logo-wrapper"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="logo" rel="home"></a></div>
       <p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'title' ); ?></a></p>
     </div><!-- .site-branding -->
-    <nav id="site-navigation" class="page-navigation" role="navigation">
+
+  <?php } ?>
+
+  <nav id="site-navigation" class="page-navigation" role="navigation">
       <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Show Menu', 'beyond_grit' ); ?></button>
       <?php wp_nav_menu( array(
         'theme_location' => 'primary',
@@ -64,5 +65,3 @@
       ?>
     </nav><!-- #site-navigation -->
   </header>
-
-  <?php } ?>

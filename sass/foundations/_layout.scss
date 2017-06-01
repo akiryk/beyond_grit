@@ -23,6 +23,7 @@
 	.main-navigation,
 	.content-main,
 	.footer{
+    // adds padding to keep content centered
 	  @include centered-content();
 	}
 

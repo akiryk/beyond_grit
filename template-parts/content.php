@@ -9,17 +9,17 @@
 
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
+	<header class="blog-entry-header">
 		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
 		<?php if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
+		<div class="blog-entry-meta">
 			<?php beyond_grit_posted_on(); ?>
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
-	<div class="entry-content">
+	<div class="blog-entry-content">
 		<?php
 			the_content( sprintf(
 				/* translators: %s: Name of current post. */
@@ -36,7 +36,7 @@
 		?>
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
-		<?php beyond_grit_entry_footer(); ?>
+	<!-- <footer class="blog-entry-footer">
+		<?php //beyond_grit_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
