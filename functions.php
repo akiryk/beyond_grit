@@ -152,9 +152,7 @@ function beyond_grit_google_captcha_scripts(){
     wp_enqueue_script(
       'reCaptchaScript', 
       'https://www.google.com/recaptcha/api.js', 
-      array(), 
-      false, 
-      true
+      array()
     );
 
     wp_enqueue_script(

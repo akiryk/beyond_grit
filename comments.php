@@ -120,6 +120,12 @@ if ( post_password_required() ) {
 	?>
 	<?php comment_form($args); ?>
 
+	<?php 
+  foreach ($_POST as $key => $value) {
+    echo '<p><strong>' . $key.':</strong> '.$value.'</p>';
+  }
+?>
+
 	<?php if ( '0' == $comment->comment_approved ) : ?>
 		<p>	
 			<em class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'your-text-domain' ); ?></em>
