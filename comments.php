@@ -21,7 +21,6 @@ if ( post_password_required() ) {
 ?>
 
 <div id="comments" class="comments-area">
-
 	<?php // You can start editing here -- including this comment! ?>
 
 	<?php if ( have_comments() ) : ?>
@@ -78,26 +77,23 @@ if ( post_password_required() ) {
 	<?php endif; ?>
 	
 	<?php 
-
+		$siteKey = '6LetFyMUAAAAAIbtcmO7h0sR8W7C4Vn3poZV4QjK' ;
+		$testSiteKey = '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI';
 		$fields =  array(
 		  'author' =>
 		    '<p class="comment-form-author"><label for="author">' . __( 'Name', 'domainreference' ) . '</label> ' .
-		    ( $req ? '<span class="required">(required) </span>' : '' ) .
+		    ( $req ? '<span class="required">*</span>' : '' ) .
 		    '<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
 		    '" size="30"' . $aria_req . ' /></p>',
-
-		  'email' =>
-		    '<p class="comment-form-email"><label for="email">' . __( 'Email', 'domainreference' ) . '</label> ' .
-		    ( $req ? '<span class="required">(required) </span>' : '' ) .
-		    '<input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) .
-		    '" size="30"' . $aria_req . ' /></p>'
-		);
+		   'captcha' =>
+		   	'<div class="g-recaptcha" data-sitekey="6LetFyMUAAAAAIbtcmO7h0sR8W7C4Vn3poZV4QjK"></div>'
+		); 
 
 		$args = array(
 		  'id_form'           => 'commentform',
 		  'class_form'      => 'comment-form',
 		  'id_submit'         => 'submit',
-		  'class_submit'      => 'submit',
+		  'class_submit'      => 'submit btn-sm',
 		  'name_submit'       => 'submit',
 		  'title_reply'       => __( 'Leave a Reply' ),
 		  'title_reply_to'    => __( 'Leave a Reply to %s' ),
@@ -105,8 +101,7 @@ if ( post_password_required() ) {
 		  'label_submit'      => __( 'Post Comment' ),
 		  'format'            => 'xhtml',
 
-		  'comment_field' =>  '<p class="comment-form-comment"><label for="comment">' . _x( 'Comment', 'noun' ) .
-		    '</label><textarea id="comment" class="comment-textarea" name="comment" cols="45" rows="8" aria-required="true">' .
+		  'comment_field' =>  '<p class="comment-form-comment"><textarea id="comment" class="comment-textarea" name="comment" cols="45" rows="8" aria-required="true">' .
 		    '</textarea></p>',
 
 		  'must_log_in' => '<p class="must-log-in">' .
@@ -115,19 +110,11 @@ if ( post_password_required() ) {
 		      wp_login_url( apply_filters( 'the_permalink', get_permalink() ) )
 		    ) . '</p>',
 
-  		  'comment_notes_before' => '<p class="comment-notes">' .
-		    __( 'Your email address will not be published.' ) . ( $req ? $required_text : '' ) .
-		    '</p>',
+  		  'comment_notes_before' => '<p class="comment-form-note-before">Please note that it may take a few days for us to moderate and publish your comment.</p>',
 
-		    'logged_in_as' => '<p class="logged-in-as">' .
-		    sprintf(
-		    __( 'Logged in as <a href="%1$s">%2$s</a>. <a href="%3$s" title="Log out of this account">Log out?</a>' ),
-		      admin_url( 'profile.php' ),
-		      $user_identity,
-		      wp_logout_url( apply_filters( 'the_permalink', get_permalink( ) ) )
-		    ) . '</p>',
+		    'logged_in_as' => '',
 
-		  'fields' => apply_filters( 'comment_form_default_fields', $fields ),
+		  	'fields' => apply_filters( 'comment_form_default_fields', $fields ),
 		);
 
 	?>

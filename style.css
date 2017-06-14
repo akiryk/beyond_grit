@@ -390,6 +390,19 @@ img {
   /* Above WP toolbar. */
 }
 
+.error-wrapper {
+  border: 1px solid #c16730;
+  padding: 1rem;
+}
+
+.error-message {
+  background-color: #c16730;
+  font-weight: 600;
+  margin: -1rem -1rem 1.25rem;
+  padding: 1rem;
+  color: white;
+}
+
 .archive-title {
   border-bottom: 2px solid;
 }
@@ -616,6 +629,13 @@ input[type="submit"]:active {
   color: white;
 }
 
+input[type="button"].btn-sm,
+input[type="reset"].btn-sm,
+input[type="submit"].btn-sm {
+  padding: 0 0.5rem;
+  font-size: 1.125rem;
+}
+
 h2.comments-title {
   font-family: "Open Sans", sans-serif;
   text-transform: initial;
@@ -669,6 +689,21 @@ h2.comments-title {
 .comment-respond {
   background: #f0f4f5;
   padding: 1rem;
+}
+
+.comment-reply-title {
+  font-family: 'Open Sans' !important;
+  text-transform: unset !important;
+  font-size: 1rem;
+}
+
+.comments-area .logged-in-as {
+  color: #a09b87;
+  font-size: .875rem;
+}
+
+.comment-form-note-before {
+  font-size: 0.875rem;
 }
 
 /*

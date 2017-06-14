@@ -141,9 +141,32 @@ function beyond_grit_scripts() {
        true // in footer 
        );
   } 
-
 }
 add_action( 'wp_enqueue_scripts', 'beyond_grit_scripts' );
+
+/**
+ * Enqueue Google ReCaptcha for Comments Single Post Pages
+ */
+function beyond_grit_google_captcha_scripts(){
+  if (is_single()) {
+    wp_enqueue_script(
+      'reCaptchaScript', 
+      'https://www.google.com/recaptcha/api.js', 
+      array(), 
+      false, 
+      true
+    );
+
+    wp_enqueue_script(
+      'handleRecaptchaResponse',
+      get_template_directory_uri() . '/js/handle-captcha.js', 
+      array('jquery'),
+      false,
+      true
+    );
+  }
+}
+add_action( 'wp_enqueue_scripts', 'beyond_grit_google_captcha_scripts' );
 
 /** 
  * Enqueue scripts for the Participating Organizations template
@@ -151,7 +174,7 @@ add_action( 'wp_enqueue_scripts', 'beyond_grit_scripts' );
 function beyond_grit_template_scripts(){
    
 }
-add_action('wp_enqueue_scripts','beyond_grit_template_scripts');
+//add_action('wp_enqueue_scripts','beyond_grit_template_scripts');
 
 
 
@@ -183,6 +206,7 @@ function remove_more_link_scroll( $link ) {
   return $link;
 }
 add_filter( 'the_content_more_link', 'remove_more_link_scroll' );
+
 
 /**
  * Implement the Custom Header feature.

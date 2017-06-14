@@ -74,4 +74,10 @@ input[type="submit"] {
     background: #0089c9;
     color: white;
   }
+
+  &.btn-sm {
+    padding: 0 0.5rem;
+    font-size: 1.125rem;
+  }
+
 }

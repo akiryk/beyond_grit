@@ -1,5 +1,4 @@
 jQuery(document).ready(function($){
-  
   /*
    * Smooth scroll, courtesy of css-tricks.
    */
