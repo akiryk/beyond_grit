@@ -41,11 +41,10 @@
           <li class="hero__callout hero__callout--right"><a href="#social-emotional"><span class="callout-text">Social and Emotional Learning</span></a></li>
         </ul>
       </nav>
-
       <nav class="section section--home-navigation" role="navigation">
           <?php wp_nav_menu( array ( 'menu' => 'Front Page Menu', 'menu_class' => 'menu menu--home',) ); ?>
       </nav>
-
+    </header>
   <?php } else { ?> <!-- Not the front page! -->
 
   <header id="masthead" class="site-header section--masthead" role="banner">

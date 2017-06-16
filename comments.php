@@ -79,9 +79,9 @@ if ( post_password_required() ) {
 	<?php 
 		$fields =  array(
 		  'author' =>
-		    '<p class="comment-form-author"><label for="author">' . __( 'Name', 'domainreference' ) . '</label> ' .
+		    '<p class="comment-form-author"><label for="author" class="comment-form-label">' . __( 'Name', 'domainreference' ) . '</label> ' .
 		    ( $req ? '<span class="required">*</span>' : '' ) .
-		    '<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
+		    '<input id="author" name="author" class="comment-form-input" type="text" placeholder="First and Last, please" value="' . esc_attr( $commenter['comment_author'] ) .
 		    '" size="30"' . $aria_req . ' /></p>',
 		); 
 
