@@ -144,28 +144,6 @@ function beyond_grit_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'beyond_grit_scripts' );
 
-/**
- * Enqueue Google ReCaptcha for Comments Single Post Pages
- */
-function beyond_grit_google_captcha_scripts(){
-  if (is_single()) {
-    wp_enqueue_script(
-      'reCaptchaScript', 
-      'https://www.google.com/recaptcha/api.js', 
-      array()
-    );
-
-    wp_enqueue_script(
-      'handleRecaptchaResponse',
-      get_template_directory_uri() . '/js/handle-captcha.js', 
-      array('jquery'),
-      false,
-      true
-    );
-  }
-}
-add_action( 'wp_enqueue_scripts', 'beyond_grit_google_captcha_scripts' );
-
 /** 
  * Enqueue scripts for the Participating Organizations template
  */

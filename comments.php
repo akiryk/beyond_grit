@@ -77,16 +77,12 @@ if ( post_password_required() ) {
 	<?php endif; ?>
 	
 	<?php 
-		$siteKey = '6LetFyMUAAAAAIbtcmO7h0sR8W7C4Vn3poZV4QjK' ;
-		$testSiteKey = '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI';
 		$fields =  array(
 		  'author' =>
 		    '<p class="comment-form-author"><label for="author">' . __( 'Name', 'domainreference' ) . '</label> ' .
 		    ( $req ? '<span class="required">*</span>' : '' ) .
 		    '<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
 		    '" size="30"' . $aria_req . ' /></p>',
-		   'captcha' =>
-		   	'<div class="g-recaptcha" data-sitekey="6LetFyMUAAAAAIbtcmO7h0sR8W7C4Vn3poZV4QjK"></div>'
 		); 
 
 		$args = array(

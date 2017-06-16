@@ -7,7 +7,7 @@ module.exports = function(grunt) {
 
     sass: {
       options: {
-        outputStyle: 'expanded',
+        outputStyle: 'compressed',
         sourceMap: true
       },
       dist: {
@@ -45,5 +45,5 @@ module.exports = function(grunt) {
 
   // Default task(s).
   grunt.registerTask('default', ['watch']);
-
+  grunt.registerTask('build',['postcss', 'sass']);
 };
