@@ -44,7 +44,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-postcss');
 
   // Default task(s).
-  grunt.registerTask('watch', ['watch']);
-  grunt.registerTask('default', ['postcss', 'sass']);
+  grunt.registerTask('serve', ['watch']);
+  grunt.registerTask('default', ['sass']);
   grunt.registerTask('build',['postcss', 'sass']);
 };
