@@ -41,10 +41,15 @@
           <li class="hero__callout hero__callout--right"><a href="#social-emotional"><span class="callout-text">Social and Emotional Learning</span></a></li>
         </ul>
       </nav>
-      <nav class="section section--home-navigation" role="navigation">
-          <?php wp_nav_menu( array ( 'menu' => 'Front Page Menu', 'menu_class' => 'menu menu--home',) ); ?>
-      </nav>
     </header>
+    <nav id="site-navigation" class="section--home-navigation" role="navigation">
+      <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Show Menu', 'beyond_grit' ); ?></button>
+      <?php wp_nav_menu( array(
+        'theme_location' => 'primary',
+        'menu_id' => 'primary-menu',
+        'menu_class'      => 'menu menu--home', ) );
+      ?>
+    </nav><!-- #site-navigation -->
   <?php } else { ?> <!-- Not the front page! -->
 
   <header id="masthead" class="site-header section--masthead" role="banner">

@@ -1,7 +1,12 @@
+/*
+ * The Primary Nav Bar at top of home page
+ */
+
 .section--home-navigation {
 	background: #2b3501;
 	margin-bottom: 0;
 	padding: 0;
+	position: relative;
 }
 
 .menu--home {
@@ -31,13 +36,119 @@
 }
 
 @media screen and (min-width: 35em){
-  	
-  	.menu--home {
-  		flex-direction: row;
-  		justify-content: center;
-			text-align: center;
-			line-height: 1.9;
-  	}
+
+  #primary-menu > li:first-of-type {
+    border: none;
+    // border-bottom: 1px solid green;
+
+    & > a {
+      display: block; // hide 'Research Areas' link
+    }
+
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+
+  // <ul>
+  .menu--home {
+		flex-direction: row;
+		justify-content: center;
+		text-align: center;
+		line-height: 1.9;
+
+	  // <li>
+	  .menu-item {
+	    border: none;
+	    text-align: left;
+	  }
+
+	  .menu-item.current-menu-item {
+	    background: $color__background-inner;
+	    border-bottom: 1px solid $color__background-inner;
+	    color: darken($color__green, 5);
+
+	    &:hover {
+	      background: $color__background-inner;
+	    }
+      &:hover a {
+        //color: darken($color__green, 5);
+      }
+	  }
+
+	  .menu-item:hover > ul,
+	  .menu-item.focus > ul {
+	    //left: 1em;
+	    opacity: 1.0;
+	    visibility: visible;
+	  }
+
+
+	  .sub-menu {
+	    background: $color__green;
+	    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+	    float: left;
+	    position: absolute;
+	    opacity: 0.0;
+	    // left: -999em;
+	    transition: all .2s;
+	    visibility: hidden;
+	    z-index: 99999;
+
+	    a {
+	      padding: 0.65em 1.5em;
+	      width: 340px;
+	    }
+
+	    li {
+	      background: #2b3501;
+	      border-bottom: none;
+	      margin-right: 0;
+	    }
+
+	    li.current-menu-item  {
+	      background: darken($color__green, 15%);
+	      border-bottom: none;
+	      color: #cfdec0;
+	      font-weight: 700;
+
+	      &:hover {
+	        background: darken($color__green, 15%);
+	        color: #cfdec0;
+	      }
+	    }
+
+	    ul {
+	      left: -999em;
+	      top: 0;
+	    }
+	  }
+	}
+}
+
+
+@media screen and (min-width: $desktop){
+
+	.page-navigation {
+		margin-top: 1em;
+		padding: 0 calc(50% - 32em);
+	}
+
+  // .menu--home {
+
+  // 	// <li>
+	 //  .menu-item {
+	 //    border: none;
+	 //    color: #a3bf87;
+	 //    margin-right: 0.25em;
+	 //  }
+
+	 //  .menu-item.current-menu-item {
+	 //    border-bottom: 1px solid $color__background-body;
+	 //  }
+
+  // }
 
 }
 
