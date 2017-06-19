@@ -21,7 +21,7 @@ Note: Optionally add a home.php file if you want to customize the display of the
 Navigation
 ----------
 
-The primary navigation uses a menu called 'Single Master NavBar', which replaces the Primary Nav and the Front Page Menu. There is now just one main menu for all pages of the site. The navigation is rendered in `header.php` 
+The navigation uses one menu: 'Primary Menu'. This is a change from earlier versions of the site, which used a front-page-menu as well as the primary version. The navigation is rendered in `header.php` Note that there is conditional logic to wrap the navigation in different classes depending on whether it is on the home page or not. 
 
 Fonts
 -----

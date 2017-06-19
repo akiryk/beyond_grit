@@ -1,11 +1,9 @@
+/*
+ * The Primary Nav Bar at top of page
+ */
+
 #primary-menu > li:first-of-type {
   border: none;
-
-
-  & > a {
-    display: none; // hide 'Research Areas' link
-  }
-
 }
 
 .page-navigation {

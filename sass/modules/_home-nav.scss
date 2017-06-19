@@ -21,6 +21,15 @@
 	text-align: center;
 }
 
+.menu--home .sub-menu {
+	li {
+		display: none;
+	} 
+  li:nth-of-type(n+3) {
+  	display: block;
+  }
+}
+
 .menu--home > li {
 	flex: 1 1 auto;
 }
@@ -47,7 +56,7 @@
 
   }
 
-  .menu-toggle {
+  .section--home-navigation .menu-toggle {
     display: none;
   }
 
@@ -105,6 +114,7 @@
 	      background: #2b3501;
 	      border-bottom: none;
 	      margin-right: 0;
+	      display: block;
 	    }
 
 	    li.current-menu-item  {
