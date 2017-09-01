@@ -4,13 +4,17 @@
 
 ## A theme for wordpress
 
+### Status
+
+Last worked on One-Nav-Bar branch in order to consolidate two different navigation schemes into one. The live branch is 'master'.
+
 ### How to install
 
 * Start with a working version of Wordpress using MAMP locally, some other technique, or on a remote server
 * Place the theme into wp-content/themes/ directory
 * Enable the theme using Wordpress admin tools.
 
-### Update on the research2action website
+### Update the research2action website
 
 * Log in and go to `/research2action/wp-content/themes/beyond_grit`
 * Copy over any new files
